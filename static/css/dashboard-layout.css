@@ -42,6 +42,10 @@
     max-width: 1920px;
 }
 
+.govuk-width-container p {
+    max-width: 810px;
+}
+
 .govuk-header__product-name {
     padding-left: 10px;
 }
