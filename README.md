@@ -39,10 +39,10 @@ markup:
 
 params:
   govuk: false
-  logotext: TST
-  product: Test Site
+  logotext: ABC
+  product: Product Name
   phase: alpha
-  feedbackurl: https://github.com/mattkerlogue/hugo-test/issues/
+  feedbackurl: https://your.site/feedback/
 
 ```
 
