@@ -115,3 +115,15 @@ td, th {
     padding-left: 10px;
     border-left: 5px solid var(--govuk-colour-light-blue);
 }
+
+pre {
+    border: 1px solid var(--govuk-colour-mid-grey)
+}
+
+pre code {
+    font-family: monospace !important;
+}
+
+pre span {
+    font-family: monospace !important;
+}
