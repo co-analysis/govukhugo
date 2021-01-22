@@ -34,16 +34,27 @@
     --govuk-colour-brown: #b58840;
     --govuk-colour-light-green: #85994b;
     --govuk-colour-turquoise: #28a197;
+    /* Text variables */
+    --govuk-max-width: 810px;
+    --govuk-max-width-list: 700px;
 }
 
 .govuk-width-container {
     margin-left: max(50px, calc(15px + env(safe-area-inset-left)));
-    margin-right: max(50px, calc(15px + env(safe-area-inset-left)));
+    margin-right: max(100px, calc(15px + env(safe-area-inset-left)));
     max-width: 1920px;
 }
 
-.govuk-width-container p {
-    max-width: 810px;
+.govuk-body p {
+    max-width: var(--govuk-max-width);
+}
+
+td, th {
+    max-width: var(--govuk-max-width);
+}
+
+.govuk-body li {
+    max-width: var(--govuk-max-width-list);
 }
 
 .govuk-header__product-name {
