@@ -1,0 +1,12 @@
+name = "govuk-hugo"
+license = "MIT"
+licenselink = "https://github.com/co-analysis/govuk-hugo/blob/master/LICENSE"
+description = "GOV.UK style theme for Hugo"
+homepage = "https://github.com/co-analysis/govuk-hugo/"
+tags = []
+features = []
+min_version = "0.41.0"
+
+[author]
+  name = ""
+  homepage = ""

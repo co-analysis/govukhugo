@@ -1,0 +1,49 @@
+<!-- sidebar start -->
+<nav class="sidebar-nav">
+
+    {{ $currentPage := . }}
+    {{ $active := "" }}
+
+    <ul class="govuk-list">
+
+        {{ range .Site.Sections }}
+
+        <li class="nav-section "><a class="govuk-body-s" href="{{ .RelPermalink }}">{{ humanize .Section }}</a></li>
+
+
+        {{range .Pages}}
+
+        {{ if eq $currentPage . }}
+        <li class="nav-item"><a class="govuk-body-s govuk-link govuk-link--no-visited-state nav-active"
+                href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+        {{ else }}
+        <li class="nav-item"><a class="govuk-body-s govuk-link govuk-link--no-visited-state nav-link"
+                href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+        {{ end }}
+
+        {{end}}
+
+        {{ end }}
+
+    </ul>
+
+    {{ with .Site.GetPage "/about" }}
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible" />
+    {{ $aboutpage := .Site.GetPage "/about"}}
+
+    <ul class="govuk-list nav-extra">
+
+        {{ if eq $currentPage . }}
+        <li class="nav-item"><a class="govuk-!-font-size-14 govuk-link govuk-link--no-visited-state nav-active"
+                href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+        {{ else }}
+        <li class="nav-item"><a class="govuk-!-font-size-14 govuk-link govuk-link--no-visited-state nav-link"
+                href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+        {{ end }}
+
+        </a>
+
+    </ul>
+    {{ end }}
+
+</nav>

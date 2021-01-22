@@ -1,0 +1,35 @@
+{{ define "main" }}
+
+<div class="govuk-body">
+    <h1 class="govuk-heading-xl">{{ .Title }}</h1>
+
+    {{ .Content }}
+
+
+    {{ with .Params.Listpages }}
+
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible" />
+
+    <h2 class="govuk-caption-xl">{{ .Title }} page list</h2>
+    <dl class="govuk-summary-list">
+
+        {{ range .Pages.ByTitle }}
+        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+                <a class="govuk-link" href="{{ .RelPermalink}}">{{ .Title }}</a>
+            </dt>
+            <dd class="govuk-summary-list__value">
+                {{ .Summary }}
+            </dd>
+
+        </div>
+        {{ end }}
+    </dl>
+
+    {{ end }}
+
+
+</div>
+
+
+{{ end }}

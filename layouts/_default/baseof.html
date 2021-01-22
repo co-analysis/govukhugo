@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" class="govuk-template ">
+
+{{- partial "head.html" . -}}
+
+<body class="govuk-template__body js-enabled">
+    {{- partial "header.html" . -}}
+
+    <div class="govuk-width-container ">
+        <main class="govuk-main-wrapper " id="main-content" role="main">
+            <div class="dashboard-container">
+
+                <div class="dashboard-nav">
+                    {{- partial "nav.html" . -}}
+                </div>
+                <div class="dashboard-content">
+                    {{- block "main" . }}{{- end }}
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    {{- partial "footer.html" . -}}
+</body>
+
+</html>
