@@ -6,6 +6,22 @@
 
 This is a work in progress. It has been created to help Cabinet Office Analysts make simple public facing sites for official statistics and open source works using the GOV.UK design system. In addition to the design system, as a data team, it has been inspired by Public Health England's [Coronavirus data dashboard](https://coronavirus.data.gov.uk/), which has adapted the GOV.UK style for data visualisation.
 
+## Features
+
+`govuk-hugo` uses [GOV.UK Frontend v3.10.2](https://github.com/alphagov/govuk-frontend/releases/tag/v3.10.2).
+
+Hugo uses [Goldmark](https://github.com/yuin/goldmark/) to render markdown to HTML. While boilerplate elements (the header, footer and navbar structure) are natively written to support the Design System, Goldmark does not add the Design System classes to the rendered HTML, the footer content includes JavaScript that applies the Design System CSS to relevant HTML tags. Therefore, `govuk-hugo` is not suitable for environments that do not support JavaScript.
+
+`govuk-hugo` does not use SASS for CSS processing, therefore the `dashboard-layout.css` provides the GOV.UK colour palettes as `:root` variables.
+
+`govuk-hugo` is designed for dashboards, and uses a wider maximum page width than standard GOV.UK pages. Text elements are however limited to a max-width to improve readability: `<p>` and `<pre>` elements are limited to 810px; `<li>` elements are limited to 700px). Other elements (e.g. tables, images, interactives).
+
+`govuk-hugo` supports code blocks, and provides syntax highlighting with [Highlight.js](https://highlightjs.org/).
+
+### Menu
+
+`govuk-hugo` uses a sidebar menu, this relies on your content being organised within sections underneath the `content` folder. Your homepage will not show in the menu. If an `about.md` file is included in the `content` folder then this is rendered as an additional link at the bottom of the menu, any other files in the content directory but not within a sub-folder are not rendered.
+
 ## Installation
 
 Follow Hugo's instructions on [getting started](https://gohugo.io/getting-started/).
