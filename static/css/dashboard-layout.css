@@ -128,3 +128,10 @@ pre code {
 pre span {
     font-family: monospace !important;
 }
+
+p code {
+    font-family: monospace !important;
+    background-color: var(--govuk-colour-light-grey);
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+}
