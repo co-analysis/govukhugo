@@ -119,6 +119,11 @@ td, th {
 pre {
     border: 1px solid var(--govuk-colour-mid-grey);
     max-width: var(--govuk-max-width);
+    font-family: monospace !important;
+}
+
+code {
+    font-family: monospace !important;
 }
 
 pre code {
