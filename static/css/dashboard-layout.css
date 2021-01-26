@@ -35,7 +35,7 @@
     --govuk-colour-light-green: #85994b;
     --govuk-colour-turquoise: #28a197;
     /* Text variables */
-    --govuk-max-width: 810px;
+    --govuk-max-width-text: 810px;
     --govuk-max-width-list: 700px;
 }
 
@@ -46,15 +46,15 @@
 }
 
 .govuk-body p {
-    max-width: var(--govuk-max-width);
+    max-width: min(100%, var(--govuk-max-width-text));
 }
 
 td, th {
-    max-width: var(--govuk-max-width);
+    max-width: min(100%, var(--govuk-max-width-text));
 }
 
 .govuk-body li {
-    max-width: var(--govuk-max-width-list);
+    max-width: min(100%, var(--govuk-max-width-list));
 }
 
 .govuk-header__product-name {
@@ -118,7 +118,7 @@ td, th {
 
 pre {
     border: 1px solid var(--govuk-colour-mid-grey);
-    max-width: var(--govuk-max-width);
+    max-width: min(100%, var(--govuk-max-width-text));
     font-family: monospace !important;
 }
 
