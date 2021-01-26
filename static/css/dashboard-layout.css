@@ -87,6 +87,17 @@ td, th {
     margin-bottom: 5px;
 }
 
+.nav-section .nav-active {
+    color: var(--govuk-secondary-text-colour);
+    text-decoration: none;
+    font-weight: 700 !important;
+    background-color: var(--govuk-colour-light-grey);
+}
+
+.nav-section .nav-active:hover {
+    color: var(--govuk-secondary-text-colour);
+}
+
 .nav-item a {
     margin-top: 2px;
     margin-bottom: 3px;
@@ -98,7 +109,7 @@ td, th {
     display: block;
 }
 
-.nav-active {
+.nav-item .nav-active {
     color: var(--govuk-link-colour);
     font-weight: 700 !important;
     padding-left: 10px !important;
@@ -106,7 +117,7 @@ td, th {
     background-color: var(--govuk-colour-light-grey);
 }
 
-.nav-active:hover {
+.nav-item .nav-active:hover {
     color: var(--govuk-link-colour);
 }
 
