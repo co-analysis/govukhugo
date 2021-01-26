@@ -79,52 +79,63 @@ td, th {
     grid-column: 2;
 }
 
-.nav-section {
-    padding-left: 5px;
+.sidebar-nav {
+    overflow-y: scroll;
+    height: calc(100vh - 200px);
 }
 
-.nav-section a {
-    color: var(--govuk-secondary-text-colour);
-    text-decoration: none;
-    font-weight: 700;
-    margin-top: 10px;
-    margin-bottom: 5px;
+.nav-section,
+.nav-item {
+    line-height: 1rem;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.nav-section {
+    margin-top: 5px;
+    padding-left: 15px;
 }
 
 .nav-active-section {
     background-color: var(--govuk-colour-light-grey);
-    border-left: 2px solid var(--govuk-colour-dark-grey);
-    padding-left: 3px;
+    border-left: 5px solid var(--govuk-colour-dark-grey);
+    padding-left: 10px;
+}
 
+.nav-section a {
+    font-weight: 700;
+    color: var(--govuk-secondary-text-colour);
+    text-decoration: none;
+}
+
+.nav-item {
+    padding-left: 30px;
+}
+
+.nav-active-item {
+    background-color: var(--govuk-colour-light-grey);
+    border-left: 5px solid var(--govuk-link-colour);
+    padding-left: 25px;
+}
+
+.nav-item:hover {
+    border-left: 5px solid var(--govuk-colour-light-blue);
+    padding-left: 25px;
+}
+
+.nav-active-item:hover {
+    border-left: 5px solid var(--govuk-link-colour) !important;
+    padding-left: 25px;
 }
 
 .nav-item a {
-    margin-top: 2px;
-    margin-bottom: 3px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 15px;
-    padding-right: 5px;
     text-decoration: none;
-    display: block;
 }
 
-.nav-item .nav-active {
+.nav-item a:hover {
+    text-decoration: none;
     color: var(--govuk-link-colour);
-    font-weight: 700 !important;
-    padding-left: 10px !important;
-    border-left: 5px solid var(--govuk-link-colour);
-    background-color: var(--govuk-colour-light-grey);
-}
-
-.nav-item .nav-active:hover {
-    color: var(--govuk-link-colour);
-}
-
-.nav-link:hover {
-    color: var(--govuk-link-colour);
-    padding-left: 10px;
-    border-left: 5px solid var(--govuk-colour-light-blue);
 }
 
 pre {

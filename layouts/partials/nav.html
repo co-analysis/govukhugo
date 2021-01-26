@@ -9,23 +9,23 @@
                 {{ range .Site.Sections.ByTitle }}
 
                 {{ if eq $currentPage . }}
-                <li class="nav-section nav-active-section"><a class="govuk-body-s govuk-!-font-size-14"
+                <li class="nav-section nav-active-section"><a class="govuk-!-font-size-14"
                                 href="{{ .RelPermalink }}">{{ .Title }}</a>
                 </li>
                 {{ else }}
-                <li class="nav-section "><a class="govuk-body-s govuk-!-font-size-14" href="{{ .RelPermalink }}">{{ .Title }}</a>
+                <li class="nav-section "><a class="govuk-!-font-size-14" href="{{ .RelPermalink }}">{{ .Title }}</a>
                 </li>
                 {{ end }}
 
                 {{range .Pages.ByTitle }}
 
                 {{ if eq $currentPage . }}
-                <li class="nav-item"><a
-                                class="govuk-body-s govuk-!-font-size-14 govuk-link govuk-link--no-visited-state nav-active"
+                <li class="nav-item nav-active-item"><a
+                                class="govuk-!-font-size-14 govuk-link govuk-link--no-visited-state "
                                 href="{{ .RelPermalink }}">{{ .Title }}</a></li>
                 {{ else }}
                 <li class="nav-item"><a
-                                class="govuk-body-s govuk-!-font-size-14 govuk-link govuk-link--no-visited-state nav-link"
+                                class="govuk-!-font-size-14 govuk-link govuk-link--no-visited-state"
                                 href="{{ .RelPermalink }}">{{ .Title }}</a></li>
                 {{ end }}
 
