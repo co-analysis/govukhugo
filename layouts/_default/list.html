@@ -6,20 +6,27 @@
     {{ .Content }}
 
 
-    {{ with .Params.Listpages }}
+    {{ if eq .Params.Listpages true }}
 
-    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible" />
+    <hr class="govuk-section-break govuk-section-break--l" />
 
-    <h2 class="govuk-caption-xl">{{ .Title }} page list</h2>
+    <h2 class="govuk-caption-xl">{{ .Title }} pages</h2>
+    <hr class="govuk-section-break govuk-section-break--m" />
+
     <dl class="govuk-summary-list">
 
         {{ range .Pages.ByTitle }}
         <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-                <a class="govuk-link" href="{{ .RelPermalink}}">{{ .Title }}</a>
+                {{ .Title }}
             </dt>
             <dd class="govuk-summary-list__value">
                 {{ .Summary }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="{{ .RelPermalink}}">
+                    Read/View</span>
+                </a>
             </dd>
 
         </div>
