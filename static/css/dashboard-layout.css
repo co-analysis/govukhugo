@@ -144,3 +144,7 @@ p code {
 .govuk-header__logo {
     width: 80%;
 }
+
+.govuk-summary-list {
+    max-width: min(100%, var(--govuk-max-width-text));
+}
