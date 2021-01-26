@@ -8,7 +8,7 @@
 
                 {{ range .Site.Sections.ByTitle }}
 
-                <li class="nav-section "><a class="govuk-body-s" href="{{ .RelPermalink }}">{{ humanize .Title }}</a>
+                <li class="nav-section "><a class="govuk-body-s" href="{{ .RelPermalink }}">{{ .Title }}</a>
                 </li>
 
 
