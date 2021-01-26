@@ -140,3 +140,7 @@ p code {
     padding-left: 0.25rem;
     padding-right: 0.25rem;
 }
+
+.govuk-header__logo {
+    width: 80%;
+}
