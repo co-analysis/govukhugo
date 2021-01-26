@@ -6,13 +6,13 @@
 
         <ul class="govuk-list">
 
-                {{ range .Site.Sections }}
+                {{ range .Site.Sections.ByTitle }}
 
                 <li class="nav-section "><a class="govuk-body-s" href="{{ .RelPermalink }}">{{ humanize .Title }}</a>
                 </li>
 
 
-                {{range .Pages}}
+                {{range .Pages.ByTitle }}
 
                 {{ if eq $currentPage . }}
                 <li class="nav-item"><a class="govuk-body-s govuk-link govuk-link--no-visited-state nav-active"
