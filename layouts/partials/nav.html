@@ -9,7 +9,7 @@
                 {{ range .Site.Sections.ByTitle }}
 
                 {{ if eq $currentPage . }}
-                <li class="nav-section "><a class="govuk-body-s govuk-!-font-size-14 nav-active"
+                <li class="nav-section nav-active-section"><a class="govuk-body-s govuk-!-font-size-14"
                                 href="{{ .RelPermalink }}">{{ .Title }}</a>
                 </li>
                 {{ else }}

@@ -79,6 +79,10 @@ td, th {
     grid-column: 2;
 }
 
+.nav-section {
+    padding-left: 5px;
+}
+
 .nav-section a {
     color: var(--govuk-secondary-text-colour);
     text-decoration: none;
@@ -87,15 +91,11 @@ td, th {
     margin-bottom: 5px;
 }
 
-.nav-section .nav-active {
-    color: var(--govuk-secondary-text-colour);
-    text-decoration: none;
-    font-weight: 700 !important;
+.nav-active-section {
     background-color: var(--govuk-colour-light-grey);
-}
+    border-left: 2px solid var(--govuk-colour-dark-grey);
+    padding-left: 3px;
 
-.nav-section .nav-active:hover {
-    color: var(--govuk-secondary-text-colour);
 }
 
 .nav-item a {
