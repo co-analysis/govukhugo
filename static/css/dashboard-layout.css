@@ -138,31 +138,6 @@ td, th {
     color: var(--govuk-link-colour);
 }
 
-pre {
-    border: 1px solid var(--govuk-colour-mid-grey);
-    max-width: min(100%, var(--govuk-max-width-text));
-    font-family: monospace !important;
-}
-
-code {
-    font-family: monospace !important;
-}
-
-pre code {
-    font-family: monospace !important;
-}
-
-pre span {
-    font-family: monospace !important;
-}
-
-p code {
-    font-family: monospace !important;
-    background-color: var(--govuk-colour-light-grey);
-    padding-left: 0.25rem;
-    padding-right: 0.25rem;
-}
-
 .govuk-header__logo {
     width: 80%;
 }
