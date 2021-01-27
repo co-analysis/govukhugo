@@ -1,11 +1,11 @@
 @font-face {
     font-family: FiraCode;
-    src: url(/assets/fonts/FiraCode-Regular.woff2);
+    src: url(../assets/fonts/FiraCode-Regular.woff2);
 }
 
 @font-face {
     font-family: FiraCode;
-    src: url(/assets/fonts/FiraCode-SemiBold.woff2);
+    src: url(../assets/fonts/FiraCode-SemiBold.woff2);
     font-weight: 500;
 }
 
