@@ -35,6 +35,35 @@
   <!-- code syntax highlighting -->
   <link href="/css/syntax.css" rel="stylesheet">
 
+  {{ with .Params.rmarkdown }}
+  <!-- rmarkdown assets -->
+  <script src="/assets/rmarkdown/header-attrs-2.5/header-attrs.js"></script>
+  <link href="/assets/rmarkdown/highlightjs-9.12.0/default.css" rel="stylesheet">
+  <script src="/assets/rmarkdown/highlightjs-9.12.0/highlight.js"></script>
+  <link href="/assets/rmarkdown/anchor-sections-1.0/anchor-sections.css" rel="stylesheet">
+  <script src="/assets/rmarkdown/anchor-sections-1.0/anchor-sections.js"></script>
+  <script src="/assets/rmarkdown/htmlwidgets-1.5.2/htmlwidgets.js"></script>
+  <script src="/assets/rmarkdown/jquery-1.12.4/jquery.min.js"></script>
+  <link href="/assets/rmarkdown/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet">
+  <script src="/assets/rmarkdown/datatables-binding-0.16/datatables.js"></script>
+  <link href="/assets/rmarkdown/dt-core-1.10.20/css/jquery.dataTables.min.css" rel="stylesheet">
+  <link href="/assets/rmarkdown/dt-core-1.10.20/css/jquery.dataTables.extra.css" rel="stylesheet">
+  <script src="/assets/rmarkdown/dt-core-1.10.20/js/jquery.dataTables.min.js"></script>
+  <link href="/assets/rmarkdown/crosstalk-1.0.1.9000/css/crosstalk.css" rel="stylesheet">
+  <script src="/assets/rmarkdown/crosstalk-1.0.1.9000/js/crosstalk.min.js"></script>
+  <script src="/assets/rmarkdown/plotly-binding-4.9.2.1/plotly.js"></script>
+  <script src="/assets/rmarkdown/typedarray-0.1/typedarray.min.js"></script>
+  <link href="/assets/rmarkdown/plotly-htmlwidgets-css-1.52.2/plotly-htmlwidgets.css" rel="stylesheet">
+  <script src="/assets/rmarkdown/plotly-main-1.52.2/plotly-latest.min.js"></script>
+  <link href="/assets/rmarkdown/leaflet-1.3.1/leaflet.css" rel="stylesheet">
+  <script src="/assets/rmarkdown/leaflet-1.3.1/leaflet.js"></script>
+  <link href="/assets/rmarkdown/leafletfix-1.0.0/leafletfix.css" rel="stylesheet">
+  <script src="/assets/rmarkdown/Proj4Leaflet-1.0.1/proj4-compressed.js"></script>
+  <script src="/assets/rmarkdown/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+  <link href="/assets/rmarkdown/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet">
+  <script src="/assets/rmarkdown/leaflet-binding-2.0.3/leaflet.js"></script>
+  {{ end }}
+
   <meta property="og:image" content="/assets/images/govuk-opengraph-image.png">
 
 </head>
