@@ -17,6 +17,7 @@
                 </li>
                 {{ end }}
 
+                {{range .Pages.GroupBy "Weight" }}
                 {{range .Pages.ByTitle }}
 
                 {{ if eq $currentPage . }}
@@ -29,7 +30,8 @@
                                 href="{{ .RelPermalink }}">{{ .Title }}</a></li>
                 {{ end }}
 
-                {{end}}
+                {{ end }}
+                {{ end }}
 
                 {{ end }}
 
