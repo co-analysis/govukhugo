@@ -28,7 +28,7 @@
 <script type="text/javascript">
 
     function applyGOVUK(tag, govuk_class) {
-        var elements = document.getElementsByTagName(tag)
+        var elements = document.querySelector("div.dashboard-content").getElementsByTagName(tag)
 
         var i;
         for (i = 0; i < elements.length; i++) {
@@ -36,6 +36,9 @@
         };
 
     };
+
+    /* Style paragraphs */
+    applyGOVUK("P", "govuk-body");
 
     /* Style headings */
     applyGOVUK("H1", "govuk-heading-xl");
