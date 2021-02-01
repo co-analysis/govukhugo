@@ -6,44 +6,44 @@
                 <h2 class="govuk-visually-hidden">Support links</h2>
                 <ul class="govuk-footer__inline-list">
                 
-                    {{ with .Site.Params.help }}
+                    {{ with .Site.GetPage .Site.Params.help }}
                     <li class="govuk-footer__inline-list-item">
-                        <a class="govuk-footer__link" href="{{ $.Site.BaseURL }}{{ . }}">
+                        <a class="govuk-footer__link" href="{{ .RelPermalink }}">
                             Help
                         </a>
                     </li>
                     {{ end }}
-                    {{ with .Site.Params.accessibility }}
+                    {{ with .Site.GetPage .Site.Params.accessibility }}
                     <li class="govuk-footer__inline-list-item">
-                        <a class="govuk-footer__link" href="{{ $.Site.BaseURL }}{{ . }}">
+                        <a class="govuk-footer__link" href="{{ .RelPermalink }}">
                             Accessibility
                         </a>
                     </li>
                     {{end}}
-                    {{ with .Site.Params.privacy }}
+                    {{ with .Site.GetPage .Site.Params.privacy }}
                     <li class="govuk-footer__inline-list-item">
-                        <a class="govuk-footer__link" href="{{ $.Site.BaseURL }}{{ . }}">
+                        <a class="govuk-footer__link" href="{{ .RelPermalink }}">
                             Privacy notice
                         </a>
                     </li>
                     {{end}}
-                    {{ with .Site.Params.cookies }}
+                    {{ with .Site.GetPage .Site.Params.cookies }}
                     <li class="govuk-footer__inline-list-item">
-                        <a class="govuk-footer__link" href="{{ $.Site.BaseURL }}{{ . }}">
+                        <a class="govuk-footer__link" href="{{ .RelPermalink }}">
                             Cookies
                         </a>
                     </li>
                     {{end}}
-                    {{ with .Site.Params.contact }}
+                    {{ with .Site.GetPage .Site.Params.contact }}
                     <li class="govuk-footer__inline-list-item">
-                        <a class="govuk-footer__link" href="{{ $.Site.BaseURL }}{{ . }}">
+                        <a class="govuk-footer__link" href="{{ .RelPermalink }}">
                             Contact
                         </a>
                     </li>
                     {{ end }}
-                    {{ with .Site.Params.terms }}
+                    {{ with .Site.GetPage .Site.Params.terms }}
                     <li class="govuk-footer__inline-list-item">
-                        <a class="govuk-footer__link" href="{{ $.Site.BaseURL }}{{ . }}">
+                        <a class="govuk-footer__link" href="{{ .RelPermalink }}">
                             Terms and conditions
                         </a>
                     </li>
