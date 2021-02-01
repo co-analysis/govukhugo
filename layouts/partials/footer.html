@@ -6,44 +6,46 @@
                 <h2 class="govuk-visually-hidden">Support links</h2>
                 <ul class="govuk-footer__inline-list">
                 
-                    {{ with .Site.GetPage .Site.Params.help }}
+                    {{ $currPage := . }}
+
+                    {{ with .Site.Params.help }}
                     <li class="govuk-footer__inline-list-item">
-                        <a class="govuk-footer__link" href="{{ .RelPermalink }}">
+                        <a class="govuk-footer__link" href="{{ relref  $currPage . }}">
                             Help
                         </a>
                     </li>
                     {{ end }}
-                    {{ with .Site.GetPage .Site.Params.accessibility }}
+                    {{ with .Site.Params.accessibility }}
                     <li class="govuk-footer__inline-list-item">
-                        <a class="govuk-footer__link" href="{{ .RelPermalink }}">
+                        <a class="govuk-footer__link" href="{{ relref  $currPage . }}">
                             Accessibility
                         </a>
                     </li>
                     {{end}}
                     {{ with .Site.GetPage .Site.Params.privacy }}
                     <li class="govuk-footer__inline-list-item">
-                        <a class="govuk-footer__link" href="{{ .RelPermalink }}">
+                        <a class="govuk-footer__link" href="{{ relref  $currPage . }}">
                             Privacy notice
                         </a>
                     </li>
                     {{end}}
                     {{ with .Site.GetPage .Site.Params.cookies }}
                     <li class="govuk-footer__inline-list-item">
-                        <a class="govuk-footer__link" href="{{ .RelPermalink }}">
+                        <a class="govuk-footer__link" href="{{ relref  $currPage . }}">
                             Cookies
                         </a>
                     </li>
                     {{end}}
                     {{ with .Site.GetPage .Site.Params.contact }}
                     <li class="govuk-footer__inline-list-item">
-                        <a class="govuk-footer__link" href="{{ .RelPermalink }}">
+                        <a class="govuk-footer__link" href="{{ relref  $currPage . }}">
                             Contact
                         </a>
                     </li>
                     {{ end }}
                     {{ with .Site.GetPage .Site.Params.terms }}
                     <li class="govuk-footer__inline-list-item">
-                        <a class="govuk-footer__link" href="{{ .RelPermalink }}">
+                        <a class="govuk-footer__link" href="{{ relref  $currPage . }}">
                             Terms and conditions
                         </a>
                     </li>
