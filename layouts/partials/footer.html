@@ -3,6 +3,62 @@
         <div class="govuk-footer__meta">
             <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
 
+                <h2 class="govuk-visually-hidden">Support links</h2>
+                <ul class="govuk-footer__inline-list">
+                
+                    {{ with .Site.Params.help }}
+                    <li class="govuk-footer__inline-list-item">
+                        <a class="govuk-footer__link" href="{{ $.Site.BaseURL }}{{ . }}">
+                            Help
+                        </a>
+                    </li>
+                    {{ end }}
+                    {{ with .Site.Params.accessibility }}
+                    <li class="govuk-footer__inline-list-item">
+                        <a class="govuk-footer__link" href="{{ $.Site.BaseURL }}{{ . }}">
+                            Accessibility
+                        </a>
+                    </li>
+                    {{end}}
+                    {{ with .Site.Params.privacy }}
+                    <li class="govuk-footer__inline-list-item">
+                        <a class="govuk-footer__link" href="{{ $.Site.BaseURL }}{{ . }}">
+                            Privacy notice
+                        </a>
+                    </li>
+                    {{end}}
+                    {{ with .Site.Params.cookies }}
+                    <li class="govuk-footer__inline-list-item">
+                        <a class="govuk-footer__link" href="{{ $.Site.BaseURL }}{{ . }}">
+                            Cookies
+                        </a>
+                    </li>
+                    {{end}}
+                    {{ with .Site.Params.contact }}
+                    <li class="govuk-footer__inline-list-item">
+                        <a class="govuk-footer__link" href="{{ $.Site.BaseURL }}{{ . }}">
+                            Contact
+                        </a>
+                    </li>
+                    {{ end }}
+                    {{ with .Site.Params.terms }}
+                    <li class="govuk-footer__inline-list-item">
+                        <a class="govuk-footer__link" href="{{ $.Site.BaseURL }}{{ . }}">
+                            Terms and conditions
+                        </a>
+                    </li>
+                    {{ end }}
+                
+                    {{ with .Site.Params.builtby }}
+                    <li class="govuk-footer__inline-list-item">
+                        Built by <a class="govuk-footer__link" href="{{ $.Site.Params.builtbyurl }}">
+                            {{ . }}
+                        </a>
+                    </li>
+                    {{ end }}
+                
+                </ul>
+
                 <svg aria-hidden="true" focusable="false" class="govuk-footer__licence-logo"
                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 483.2 195.7" height="17" width="41">
                     <path fill="currentColor"
