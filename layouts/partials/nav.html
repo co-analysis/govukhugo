@@ -44,12 +44,12 @@
         <ul class="govuk-list nav-extra">
 
                 {{ if eq $currentPage . }}
-                <li class="nav-item"><a
-                                class="govuk-body-s govuk-!-font-size-14 govuk-link govuk-link--no-visited-state nav-active"
+                <li class="nav-item nav-active-item nav-about"><a
+                                class="govuk-body-s govuk-!-font-size-14 govuk-link govuk-link--no-visited-state"
                                 href="{{ .RelPermalink }}">{{ .Title }}</a></li>
                 {{ else }}
-                <li class="nav-item"><a
-                                class="govuk-body-s govuk-!-font-size-14 govuk-link govuk-link--no-visited-state nav-link"
+                <li class="nav-item nav-about"><a
+                                class="govuk-body-s govuk-!-font-size-14 govuk-link govuk-link--no-visited-state"
                                 href="{{ .RelPermalink }}">{{ .Title }}</a></li>
                 {{ end }}
 
