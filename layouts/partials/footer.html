@@ -85,7 +85,7 @@
 <script type="text/javascript">
 
     function applyGOVUK(tag, govuk_class) {
-        var elements = document.querySelector("div.dashboard-content").getElementsByTagName(tag)
+        var elements = document.querySelectorAll("div.dashboard-content").getElementsByTagName(tag)
 
         var i;
         for (i = 0; i < elements.length; i++) {
@@ -121,6 +121,12 @@
     applyGOVUK("OL", "govuk-list");
     applyGOVUK("OL", "govuk-list--number");
 
-    
+    /* Add spacing to code highlight divs */
+    var code_elements = document.querySelector("div.highlight")
+
+    var i;
+    for (i = 0; i < code_elements.length; i++) {
+        code_elements[i].classList.add("govuk-body");
+    };
 
 </script>
