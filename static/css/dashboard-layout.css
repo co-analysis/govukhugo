@@ -106,7 +106,7 @@ td, th {
 }
 
 .nav-section:hover {
-    border-left: 5px solid var(--govuk-link-colour);
+    border-left: 5px solid var(--govuk-colour-light-blue);
     padding-left: 10px;
 }
 
