@@ -36,7 +36,7 @@
     --govuk-colour-turquoise: #28a197;
     /* Text variables */
     --govuk-max-width-text: 810px;
-    --govuk-max-width-list: 700px;
+    --govuk-max-width-inset: 700px;
 }
 
 .govuk-width-container {
@@ -54,7 +54,11 @@ td, th {
 }
 
 .govuk-body li {
-    max-width: min(100%, var(--govuk-max-width-list));
+    max-width: min(100%, var(--govuk-max-width-inset));
+}
+
+.govuk-inset-text {
+    max-width: min(100%, var(--govuk-max-width-inset));
 }
 
 .govuk-header__product-name {
