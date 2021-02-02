@@ -122,11 +122,14 @@
     applyGOVUK("OL", "govuk-list--number");
 
     /* Add spacing to code highlight divs */
-    var code_elements = document.querySelector("div.highlight")
-
-    var i;
-    for (i = 0; i < code_elements.length; i++) {
-        code_elements[i].classList.add("govuk-body");
+    function styleCodeBlocks() {
+        var code_elements = document.querySelector("div.highlight")
+        var i;
+        
+        for (i = 0; i < code_elements.length; i++) {
+            code_elements[i].classList.add("govuk-body");
+        };
     };
+    styleCodeBlocks();
 
 </script>
