@@ -84,7 +84,6 @@ td, th {
     height: calc(100vh - 200px);
     position: sticky;
     top: 20px;
-    border-right: 1px solid var(--govuk-border-colour);
 }
 
 .nav-section,
