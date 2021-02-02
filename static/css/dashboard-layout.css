@@ -105,6 +105,11 @@ td, th {
     padding-left: 10px;
 }
 
+.nav-section:hover {
+    border-left: 5px solid var(--govuk-colour-dark-grey);
+    padding-left: 10px;
+}
+
 .nav-section a {
     font-weight: 700;
     color: var(--govuk-secondary-text-colour);
@@ -138,6 +143,10 @@ td, th {
 .nav-item a:hover {
     text-decoration: none;
     color: var(--govuk-link-colour);
+}
+
+.nav-active-item a {
+    font-weight: 700;
 }
 
 .govuk-header__logo {
