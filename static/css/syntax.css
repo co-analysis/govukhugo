@@ -10,7 +10,7 @@
 }
 
 /* In-line code blocks */
-p code { 
+p code, li code { 
     font-family: FiraCode, monospace !important;
     font-size: 1rem;
     padding: 0 0.4em 0 0.4em;
