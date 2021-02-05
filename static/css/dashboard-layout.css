@@ -165,3 +165,34 @@ td, th {
 .govuk-summary-list {
     max-width: min(100%, var(--govuk-max-width-text));
 }
+
+.toc-header {
+    color: var(--govuk-secondary-text-colour);
+    font-weight: 700;
+}
+
+ul.toc-list {
+    list-style-type: none;
+    padding-left: 1em;
+    margin: 0px;
+}
+
+ul.toc-list ul.toc-list {
+    list-style-type: none;
+    padding-left: 2em;
+}
+
+.toc-list li {
+    padding-top: 5px;
+}
+
+.toc-list li:before {
+    content: ">";
+    padding-right: 0.4em;
+    color: var(--govuk-secondary-text-colour);
+    font-size: 0.8rem;
+}
+
+.toc-list a {
+    color: var(--govuk-secondary-text-colour);
+}
