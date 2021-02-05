@@ -166,6 +166,13 @@ td, th {
     max-width: min(100%, var(--govuk-max-width-text));
 }
 
+aside#page_toc {
+    width: fit-content;
+    border: 1px solid var(--govuk-border-colour);
+    padding: 1em;
+    padding-right: 2em;
+}
+
 .toc-header {
     color: var(--govuk-secondary-text-colour);
     font-weight: 700;
