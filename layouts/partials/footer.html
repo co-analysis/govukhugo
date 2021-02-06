@@ -155,4 +155,35 @@
     };
     restyleTOC();
 
+    {{ with .Params.rmarkdown }}
+
+    /* style datatables */
+    govuk_DT_styling = function () {
+        $("table.dataTable").addClass("govuk-table");
+        $("table.dataTable thead").addClass("govuk-table__head");
+        $("table.dataTable tbody").addClass("govuk-table__body");
+        $("table.dataTable tr").addClass("govuk-table__row");
+        $("table.dataTable th").addClass("govuk-table__header");
+        $("table.dataTable td").addClass("govuk-table__cell");
+        $(".datatables label").addClass("govuk-label govuk-!-font-size-16");
+        $(".datatables select").addClass("govuk-select govuk-!-font-size-16");
+        $(".datatables input").addClass("govuk-input govuk-!-font-size-16");
+        $(".datatables a.ui-button:not(.ui-state-disabled)").addClass("govuk-tag govuk-tag--grey govuk-!-font-size-14");
+        $(".datatables a.ui-button.ui-state-disabled").addClass("govuk-tag govuk-tag--blue govuk-!-font-size-14");
+        $(".datatables a.ui-button.previous.ui-state-disabled").css("display", "none");
+        $(".datatables a.ui-button.next.ui-state-disabled").css("display", "none");
+        $(".datatables table").css("border-bottom", "unset");
+        $("button.dt-button.ui-button").addClass("govuk-button govuk-!-font-size-14");
+        $(".crosstalk-input .control-label").addClass("govuk-label govuk-!-font-size-16");
+    };
+
+    $(".datatables").on('init.dt', function () {
+            $('.dataTables_filter').insertAfter("#fs_org");
+            $('.loading').css("display", "none");
+        });
+
+    $(".datatables").on('draw.dt', function () { govuk_DT_styling(); });
+
+    {{ end }}
+
 </script>

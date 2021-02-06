@@ -1,0 +1,65 @@
+.dataTable {
+  margin-bottom: 10px !important;
+}
+
+.dataTable th, .dataTable td {
+  padding-left: 0px !important;
+  padding-right: 20px !important;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+}
+
+.DataTables_sort_icon {
+  margin: unset !important;
+  position: unset !important;
+  right: unset !important;
+}
+
+.sorting_asc .DataTables_sort_icon::after {
+  content: "▲";
+  font-size: 0.8rem;
+  padding-left: 0.2rem;
+}
+
+.sorting_desc .DataTables_sort_icon::after {
+  content: "▼";
+  font-size: 0.8rem;
+  padding-left: 0.2rem;
+}
+
+.dataTables_filter {
+  margin-bottom: 10px;
+}
+
+.dataTables_filter label {
+  text-align: left !important;
+}
+
+.dataTables_filter input {
+  margin-left: 0px !important;
+  margin-top: 5px !important;
+}
+
+.govuk_dt_footer .dt-buttons {
+  position: unset;
+  float: left;
+}
+
+.govuk_dt_footer .govuk_dt_nav {
+  float: right;
+}
+
+.govuk_dt_footer .dataTables_info {
+  position: unset;
+  float: unset;
+  clear: unset;
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.govuk_dt_footer .dataTables_paginate {
+  position: unset;
+  float: unset;
+  clear: unset;
+  display: inline-block;
+}
