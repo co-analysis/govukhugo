@@ -8,6 +8,10 @@
 
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
+  {{ with $.Site.Params.noindex }
+  <meta name="robots" content="noindex">
+  {{ end }}}
+
   {{ with $.Site.Params.Govuk }}
   <link rel="shortcut icon" sizes="16x16 32x32 48x48" href="/assets/images/favicon.ico" type="image/x-icon">
   <link rel="mask-icon" href="/assets/images/govuk-mask-icon.svg" color="#0b0c0c">
