@@ -1,0 +1,9 @@
+{{ if len .Params | eq 2 }}
+<strong {{ with .Get "colour" }}class="govuk-tag govuk-tag--{{ . }}" {{ end }}>
+  {{ .Get "title" }}
+</strong>
+{{ else }}
+<strong class="govuk-tag">
+  {{ .Get 0 }}
+</strong>
+{{ end }}
