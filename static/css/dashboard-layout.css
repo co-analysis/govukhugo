@@ -49,6 +49,17 @@
     max-width: min(100%, var(--govuk-max-width-text));
 }
 
+.govuk-body h1,
+.govuk-body h2,
+.govuk-body h3,
+.govuk-body h4 {
+    max-width: min(100%, var(--govuk-max-width-text));
+}
+
+.govuk-body .govuk-notification-banner {
+    max-width: min(100%, var(--govuk-max-width-text));
+}
+
 td, th {
     max-width: min(100%, var(--govuk-max-width-text));
 }
