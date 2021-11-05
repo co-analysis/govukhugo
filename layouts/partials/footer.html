@@ -89,7 +89,12 @@
 
         var i;
         for (i = 0; i < elements.length; i++) {
-            elements[i].classList.add(govuk_class);
+            if (elements[i].classList.contains("lntable") || elements[i].classList.contains("lntd")) {
+                null;
+            } else {
+                elements[i].classList.add(govuk_class);
+            }
+            
         };
 
     };

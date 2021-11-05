@@ -10,7 +10,9 @@
 }
 
 /* In-line code blocks */
-p code, li code, td code { 
+p code,
+li code,
+td.govuk-table__cell code {
     font-family: FiraCode, monospace !important;
     font-size: 1rem;
     padding: 0 0.4em 0 0.4em;
