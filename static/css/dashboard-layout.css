@@ -178,15 +178,8 @@ td, th {
 }
 
 aside#page_toc {
-    width: fit-content;
-    border: 1px solid var(--govuk-border-colour);
-    padding: 1em;
-    padding-right: 2em;
-}
-
-.toc-header {
-    color: var(--govuk-secondary-text-colour);
-    font-weight: 700;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 ul.toc-list {
@@ -205,14 +198,16 @@ ul.toc-list ul.toc-list {
 }
 
 .toc-list li:before {
-    content: ">";
+    content: "—";
     padding-right: 0.4em;
-    color: var(--govuk-secondary-text-colour);
-    font-size: 0.8rem;
 }
 
 .toc-list a {
-    color: var(--govuk-secondary-text-colour);
+    text-decoration: none;
+}
+
+.toc-list a:hover {
+    text-decoration: underline;
 }
 
 figure {
