@@ -5,9 +5,9 @@
 
                 <h2 class="govuk-visually-hidden">Support links</h2>
                 <ul class="govuk-footer__inline-list">
-                
+
                     {{ $currPage := . }}
-                    
+
                     {{ with .Site.Params.help }}
                     <li class="govuk-footer__inline-list-item">
                         <a class="govuk-footer__link" href="{{ relref  $currPage . }}">
@@ -57,7 +57,7 @@
                         </a>
                     </li>
                     {{ end }}
-                
+
                 </ul>
 
                 <svg aria-hidden="true" focusable="false" class="govuk-footer__licence-logo"
@@ -98,7 +98,7 @@
             } else {
                 elements[i].classList.add(govuk_class);
             }
-            
+
         };
 
     };
@@ -138,7 +138,7 @@
     function styleCodeBlocks() {
         var code_elements = document.querySelectorAll("div.highlight")
         var i;
-        
+
         for (i = 0; i < code_elements.length; i++) {
             code_elements[i].classList.add("govuk-body");
         };
@@ -191,9 +191,9 @@
     };
 
     $(".datatables").on('init.dt', function () {
-            $('.dataTables_filter').insertAfter("#fs_org");
-            $('.loading').css("display", "none");
-        });
+        $('.dataTables_filter').insertAfter("#fs_org");
+        $('.loading').css("display", "none");
+    });
 
     $(".datatables").on('draw.dt', function () { govuk_DT_styling(); });
 
