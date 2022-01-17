@@ -1,0 +1,7 @@
+<div class="govuk-body">
+{{ if isset .Params "visible" }}
+  <hr class="govuk-section-break govuk-section-break--{{ .Get "type" }} govuk-section-break--visible">
+{{ else }}
+  <hr class="govuk-section-break govuk-section-break--{{ .Get "type" }}">
+{{ end }}
+</div>

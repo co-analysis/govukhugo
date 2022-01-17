@@ -1,0 +1,9 @@
+{{ if isset .Params "type" }}
+  {{ if .Params.type | eq "disabled" }}
+    <a href="" class="govuk-button govuk-button--{{ .Get "type" }} " data-module=" govuk-button">{{ .Get "text" }}</a>
+  {{ else }}
+    <a href="{{ .Get "link" }}" class="govuk-button govuk-button--{{ .Get "type" }} " data-module="govuk-button" rel="noreferrer noopener" target="_blank">{{ .Get "text" }}</a>
+    {{ end }}
+{{ else }}
+<a href="{{ .Get "link" }}" class="govuk-button" data-module="govuk-button" rel="noreferrer noopener" target="_blank">{{ .Get "text" }}</a>
+{{ end }}
