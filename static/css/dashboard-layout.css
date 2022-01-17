@@ -211,8 +211,7 @@ ul.toc-list ul.toc-list {
 }
 
 figure {
-    margin-left: 0px;
-    margin-right: 0px
+    margin: 0px;
 }
 
 a.download-link {
