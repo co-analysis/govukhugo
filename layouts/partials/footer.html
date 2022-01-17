@@ -91,6 +91,10 @@
         for (i = 0; i < elements.length; i++) {
             if (elements[i].classList.contains("lntable") || elements[i].classList.contains("lntd")) {
                 null;
+            } else if (tag == "P" && (elements[i].classList.contains("govuk-body-l") || elements[i].classList.contains("govuk-body-s"))) {
+                null;
+            } else if (tag == "HR" && (elements[i].classList.contains("govuk-section-break"))) {
+                null;
             } else {
                 elements[i].classList.add(govuk_class);
             }
