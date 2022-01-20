@@ -1,0 +1,10 @@
+@font-face {
+  font-family: "GDS Transport";
+  src: url(../assets/fonts/light-94a07e06a1-v2.woff2);
+}
+
+@font-face {
+  font-family: "GDS Transport";
+  src: url(../assets/fonts/bold-affa96571d-v2.woff);
+  font-weight: bold;
+}
