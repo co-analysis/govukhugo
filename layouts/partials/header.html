@@ -11,8 +11,9 @@
         <div class="govuk-header__logo">
             <a href="/" class="govuk-header__link govuk-header__link--homepage">
 
+                {{ if eq .Site.Params.Logo "crown"}}
+
                 <span class="govuk-header__logotype">
-                    {{ if eq .Site.Params.Logo "crown"}}
                     <svg aria-hidden="true" focusable="false" class="govuk-header__logotype-crown"
                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 132 97" height="30" width="36">
                         <path fill="currentColor" fill-rule="evenodd"
@@ -21,22 +22,16 @@
                         <image src="/assets/images/govuk-logotype-crown.png" xlink:href=""
                             class="govuk-header__logotype-crown-fallback-image" width="36" height="32"></image>
                     </svg>
-                    {{ end }}
-
                 </span>
-
+                {{ end }}
                 <span class="govuk-header__product-name">
                     {{ with $.Site.Params.Product}}
                     {{ $.Site.Params.Product }}
                     {{ else }}
                     {{ $.Site.Title }}
                     {{ end }}
+                </span>
             </a>
-            </span>
-        </div>
-
-        <div class="govuk-header__product-name">
-
         </div>
 
     </div>
