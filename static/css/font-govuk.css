@@ -13,3 +13,16 @@
 figure.govuk_chart svg text {
   font-family: "GDS Transport" !important;
 }
+
+.leaflet,
+.leaflet .info,
+.leaflet-container {
+  font: unset;
+  font-family: "GDS Transport" !important;
+  font-size: 0.875rem !important;
+  color: var(--govuk-text-colour);
+}
+
+.leaflet strong {
+  font-weight: bold !important;
+}
