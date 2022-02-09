@@ -73,6 +73,10 @@
   min-height: 30px;
 }
 
+.govuk_dt_table {
+  overflow-x: scroll;
+}
+
 .govuk_dt_nav {
   display: flex;
   justify-content: space-between;
