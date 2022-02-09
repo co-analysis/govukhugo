@@ -1,3 +1,9 @@
+/* Custom CSS for RMarkdown documents */
+
+/*  ===========================
+    dataTables styling
+    =========================== */
+
 .dataTable {
   margin-bottom: 10px !important;
 }
@@ -96,6 +102,10 @@
   margin-left: 0px !important;
 }
 
+/*  ===========================
+    data-card section styling
+    =========================== */
+
 .data-card {
   background-color: var(--govuk-colour-light-grey);
   padding: 10px 0px;
@@ -110,6 +120,10 @@
 .data-display {
   border-left: 2px solid var(--govuk-border-colour);
 }
+
+/*  ===========================
+    crosstalk selectize filters
+    =========================== */
 
 .crosstalk-input .control-label {
   margin-bottom: 5px;
@@ -205,6 +219,11 @@
   line-height: 1.25;
   padding: 5px;
 }
+
+/*  ===========================
+    crosstalk checkbox filters
+    =========================== */
+
 .crosstalk-options-group .checkbox {
   min-height: 24px;
   margin-bottom: 15px;
