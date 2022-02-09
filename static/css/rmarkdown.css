@@ -2,6 +2,14 @@
   margin-bottom: 10px !important;
 }
 
+.dataTable tr {
+  background-color: unset !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .ellipsis {
+  padding: 0 0.25em !important;
+}
+
 .dataTable th, .dataTable td {
   padding-left: 0px !important;
   padding-right: 20px !important;
@@ -40,32 +48,56 @@
   margin-top: 5px !important;
 }
 
-.govuk_dt_footer .dt-buttons {
-  position: unset;
-  float: left;
+.dt-buttons button {
+  margin-bottom: 10px !important;
+  border: 0;
+  background-color: var(--govuk-colour-green);
+  cursor: pointer;
 }
 
-.govuk_dt_footer .govuk_dt_nav {
-  float: right;
+.dt-buttons button.buttons-copy {
+  background-image: url("../assets/images/content_copy_white_18dp.svg");
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  background-position: 5px 5px;
+  padding-left: 30px;
+  min-height: 30px;
 }
 
-.govuk_dt_footer .dataTables_info {
-  position: unset;
-  float: unset;
-  clear: unset;
-  display: inline-block;
-  margin-right: 20px;
+.dt-buttons button.buttons-csv {
+  background-image: url("../assets/images/file_download_white_18dp.svg");
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  background-position: 5px 5px;
+  padding-left: 30px;
+  min-height: 30px;
 }
 
-.govuk_dt_footer .dataTables_paginate {
-  position: unset;
-  float: unset;
-  clear: unset;
-  display: inline-block;
+.govuk_dt_nav {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.govuk_dt_nav > div {
+  margin-bottom: 10px;
+}
+
+.govuk_dt_nav .dataTables_paginate .ui-button {
+  padding: 5px 8px !important;
+  margin: 0px 2px !important;
+}
+
+.govuk_dt_nav .dataTables_paginate .ui-button:first-of-type {
+  margin-left: 0px !important;
+}
+
+.data-card {
+  background-color: var(--govuk-colour-light-grey);
+  padding: 5px;
 }
 
 .filter-controls {
-  background-color: var(--govuk-colour-light-grey);
   padding-top: 15px;
 }
 
@@ -75,6 +107,11 @@ div.selectize-input {
   margin-bottom: 1rem !important;
 }
 
+.crosstalk-input label {
+  padding-bottom: 10px;
+}
+
+/*
 .selectize-dropdown>.option {
   font-size: 0.875rem !important;
   color: #0b0c0c !important;
@@ -105,3 +142,4 @@ div.selectize-input.items>div {
   padding-top: 0.25rem !important;
   padding-bottom: 0.25rem !important;
 }
+*/
