@@ -8,3 +8,8 @@
   src: url(../assets/fonts/bold-affa96571d-v2.woff);
   font-weight: bold;
 }
+
+/* Apply GOV.UK fonts */
+figure.govuk_chart svg text {
+  font-family: "GDS Transport" !important;
+}
