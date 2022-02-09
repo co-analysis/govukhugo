@@ -205,3 +205,48 @@
   line-height: 1.25;
   padding: 5px;
 }
+.crosstalk-options-group .checkbox {
+  min-height: 24px;
+  margin-bottom: 15px;
+}
+
+.crosstalk-options-group .checkbox input {
+  cursor: pointer;
+  position: absolute;
+  z-index: 1;
+  top: -2px;
+  left: -10px;
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  opacity: 0
+}
+
+.crosstalk-options-group .checkbox label {
+  padding: 5px 35px;
+}
+
+.crosstalk-options-group .checkbox label input ~ span::before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  border: 2px solid var(--govuk-colour-black);
+  background-color: #fff;
+}
+
+.crosstalk-options-group .checkbox label input:checked ~ span::after {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 12px;
+  height: 6.5px;
+  transform: rotate(-45deg);
+  border-left: 3px solid var(--govuk-colour-black);
+  border-bottom: 3px solid var(--govuk-colour-black);
+}
