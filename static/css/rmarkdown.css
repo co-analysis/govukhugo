@@ -14,6 +14,7 @@
 
 .dataTables_wrapper .dataTables_paginate .ellipsis {
   padding: 0 0.25em !important;
+  colour: var(--govuk-secondary-text-colour);
 }
 
 .dataTable th, .dataTable td {
@@ -57,12 +58,13 @@
 .dt-buttons button {
   margin-bottom: 10px !important;
   border: 0;
-  background-color: var(--govuk-colour-green);
   cursor: pointer;
+  color: var(--govuk-link-colour);
+  font-weight: bold;
 }
 
 .dt-buttons button.buttons-copy {
-  background-image: url("../assets/images/content_copy_white_18dp.svg");
+  background-image: url("../assets/images/content_copy_grey_18dp.svg");
   background-repeat: no-repeat;
   background-size: 20px 20px;
   background-position: 5px 5px;
@@ -71,7 +73,7 @@
 }
 
 .dt-buttons button.buttons-csv {
-  background-image: url("../assets/images/file_download_white_18dp.svg");
+  background-image: url("../assets/images/file_download_grey_18dp.svg");
   background-repeat: no-repeat;
   background-size: 20px 20px;
   background-position: 5px 5px;
@@ -94,12 +96,21 @@
 }
 
 .govuk_dt_nav .dataTables_paginate .ui-button {
-  padding: 5px 8px !important;
+  padding: 5px 0px !important;
   margin: 0px 2px !important;
+}
+
+.datatables a.ui-button:not(.ui-state-disabled) {
+  color: var(--govuk-link-colour);
+  font-weight: bold;
 }
 
 .govuk_dt_nav .dataTables_paginate .ui-button:first-of-type {
   margin-left: 0px !important;
+}
+
+.dataTables_info {
+  color: var(--govuk-secondary-text-colour) !important;
 }
 
 /*  ===========================
