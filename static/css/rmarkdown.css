@@ -113,13 +113,18 @@
   color: var(--govuk-secondary-text-colour) !important;
 }
 
+.govuk_dt_nav .dt-buttons:only-child {
+  margin-right: 0;
+  margin-left: auto;
+}
+
 /*  ===========================
     data-card section styling
     =========================== */
 
 .data-card {
   background-color: var(--govuk-colour-light-grey);
-  padding: 10px 0px;
+  padding: 15px 0px;
   display: flex;
   flex-wrap: wrap;
 }
@@ -130,6 +135,11 @@
 
 .data-display {
   border-left: 2px solid var(--govuk-border-colour);
+}
+
+.data-card.govuk-grid-column-full,
+.data-card .govuk-grid-column-full {
+  padding: 0px 15px;
 }
 
 /*  ===========================
@@ -279,4 +289,10 @@
   transform: rotate(-45deg);
   border-left: 3px solid var(--govuk-colour-black);
   border-bottom: 3px solid var(--govuk-colour-black);
+}
+
+#clear-filters {
+  color: var(--govuk-link-colour);
+  font-weight: bold;
+  cursor: pointer;
 }
