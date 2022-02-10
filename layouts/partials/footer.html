@@ -191,12 +191,25 @@
         $(".crosstalk-input .control-label").addClass("govuk-label govuk-!-font-size-16");
     };
 
+    reset_filters = function () {
+        $(".selectized").each(function (index, element) {
+            element.selectize && element.selectize.clear()
+        });
+
+        $("input[type='search']").val('')
+
+        $(".datatables table").DataTable().search("")
+
+    };
+
     $(".datatables").on('init.dt', function () {
         $('.dataTables_filter').insertAfter("#fs_org");
         $('.loading').css("display", "none");
     });
 
     $(".datatables").on('draw.dt', function () { govuk_DT_styling(); });
+
+    $("#clear-filters").on('click', function () { reset_filters();});
 
     {{ end }}
 
