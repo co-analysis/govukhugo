@@ -56,6 +56,7 @@
 }
 
 .dt-buttons button {
+  background-color: unset;
   margin-bottom: 10px !important;
   border: 0;
   cursor: pointer;
