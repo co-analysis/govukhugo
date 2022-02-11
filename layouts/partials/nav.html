@@ -10,16 +10,26 @@
 
                 {{ range sort $site_sections ".Params.Weight" }}
 
+                {{ $currentSection := . }}
+
                 {{ if eq $currentPage . }}
-                <li class="nav-section nav-active-section"><a class="govuk-!-font-size-14" href="{{ .RelPermalink }}">{{ .Title }}</a>
+                <li class="nav-section nav-active-section nav-current"><a class="govuk-!-font-size-16" href="{{ .RelPermalink }}">{{ .Title }}</a>
                 </li>
                 {{ else }}
-                <li class="nav-section "><a class="govuk-!-font-size-14" href="{{ .RelPermalink }}">{{ .Title }}</a>
+
+                {{ if eq $currentSection.Section $currentPage.Section }}
+                <li class="nav-section nav-active-section"><a class="govuk-!-font-size-16" href="{{ .RelPermalink }}">{{ .Title }}</a>
                 </li>
+                {{ else }}
+                <li class="nav-section"><a class="govuk-!-font-size-16" href="{{ .RelPermalink }}">{{ .Title }}</a>
+                </li>
+                {{ end }}
                 {{ end }}
 
                 {{range .Pages.GroupBy "Weight" }}
                 {{range .Pages.ByTitle }}
+
+                {{ if eq $currentSection.Section $currentPage.Section }}
 
                 {{ if eq $currentPage . }}
                 <li class="nav-item nav-active-item"><a
@@ -31,6 +41,8 @@
                 {{ end }}
 
                 {{ end }}
+
+                {{ end }}
                 {{ end }}
 
                 {{ end }}
@@ -38,8 +50,6 @@
         </ul>
 
         {{ with .Site.GetPage "/about" }}
-        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible" />
-        {{ $aboutpage := .Site.GetPage "/about"}}
 
         <ul class="govuk-list nav-extra">
 

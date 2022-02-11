@@ -110,50 +110,68 @@ td, th {
 }
 
 .nav-section {
-    margin-top: 5px;
+    margin-top: 20px;
     padding-left: 15px;
 }
 
-.nav-active-section {
+.nav-section:first-of-type {
+    margin-top: 0px;
+    padding-left: 15px;
+}
+
+.nav-active-section.nav-current {
     background-color: var(--govuk-colour-light-grey);
-    border-left: 5px solid var(--govuk-colour-dark-grey);
+    border-left: 5px solid var(--govuk-link-colour);
+    padding-left: 10px;
+}
+
+.nav-active-section {
     padding-left: 10px;
 }
 
 .nav-section:hover {
-    border-left: 5px solid var(--govuk-colour-mid-grey);
+    border-left: 5px solid var(--govuk-colour-light-blue);
     padding-left: 10px;
 }
 
 .nav-active-section:hover {
-    border-left: 5px solid var(--govuk-colour-dark-grey);
+    border-left: 5px solid var(--govuk-colour-light-blue);
+    padding-left: 10px;
+}
+
+.nav-active-section.nav-current:hover {
+    border-left: 5px solid var(--govuk-link-colour) !important;
     padding-left: 10px;
 }
 
 .nav-section a {
+    color: var(--govuk-link-colour);
+    text-decoration: none;
+}
+
+.nav-active-section a {
     font-weight: 700;
-    color: var(--govuk-secondary-text-colour);
     text-decoration: none;
 }
 
 .nav-item {
-    padding-left: 30px;
+    padding-left: 15px;
 }
 
 .nav-active-item {
     background-color: var(--govuk-colour-light-grey);
     border-left: 5px solid var(--govuk-link-colour);
-    padding-left: 25px;
+    padding-left: 10px;
 }
 
 .nav-item:hover {
     border-left: 5px solid var(--govuk-colour-light-blue);
-    padding-left: 25px;
+    padding-left: 10px;
 }
 
 .nav-active-item:hover {
     border-left: 5px solid var(--govuk-link-colour) !important;
-    padding-left: 25px;
+    padding-left: 10px;
 }
 
 .nav-item a {
@@ -167,6 +185,11 @@ td, th {
 
 .nav-active-item a {
     font-weight: 700;
+}
+
+.nav-extra {
+    border-top: 1px solid var(--govuk-border-colour);
+    padding-top: 10px;
 }
 
 .govuk-header__logo {
