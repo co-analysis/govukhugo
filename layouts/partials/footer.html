@@ -114,6 +114,7 @@
 
     /* Style tables */
     applyGOVUK("TABLE", "govuk-table");
+    applyGOVUK("CAPTION", "govuk-table__caption govuk-table__caption--m");
     applyGOVUK("TR", "govuk-table__row");
     applyGOVUK("TD", "govuk-table__cell");
     applyGOVUK("THEAD", "govuk-table__head");
@@ -173,6 +174,7 @@
     /* style datatables */
     govuk_DT_styling = function () {
         $("table.dataTable").addClass("govuk-table");
+        $("table.dataTable caption").addClass("govuk-table__caption govuk-table__caption--m");
         $("table.dataTable thead").addClass("govuk-table__head");
         $("table.dataTable tbody").addClass("govuk-table__body");
         $("table.dataTable tr").addClass("govuk-table__row");
