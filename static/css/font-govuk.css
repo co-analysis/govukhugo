@@ -26,3 +26,7 @@ figure.govuk_chart svg text {
 .leaflet strong {
   font-weight: bold !important;
 }
+
+.dt-button-info {
+  font-family: "GDS Transport" !important;
+}
