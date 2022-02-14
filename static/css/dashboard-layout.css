@@ -131,6 +131,13 @@ td, th {
         padding: 0;
     }
 
+    li.nav-active-section.nav-current,
+    li.nav-section.nav-active-section:hover {
+        background-color: unset;
+        border-left: none;
+        padding: 0px;
+    }
+
     li.nav-section.nav-active-section:hover {
         border: none;
     }
