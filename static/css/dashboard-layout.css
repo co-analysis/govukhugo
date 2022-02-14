@@ -45,6 +45,20 @@
     max-width: 1440px;
 }
 
+@media screen and (max-width:768px) {    
+    .govuk-width-container {
+        margin-left: max(30px, calc(15px + env(safe-area-inset-left)));
+        margin-right: max(30px, calc(15px + env(safe-area-inset-left)));
+    }
+}
+
+@media screen and (max-width:425px) {
+    .govuk-width-container {
+        margin-left: max(15px, calc(15px + env(safe-area-inset-left)));
+        margin-right: max(15px, calc(15px + env(safe-area-inset-left)));
+    }
+}
+
 .govuk-body p {
     max-width: min(100%, var(--govuk-max-width-text));
 }
@@ -72,8 +86,16 @@ td, th {
     max-width: min(100%, var(--govuk-max-width-inset));
 }
 
+.govuk-header__logo {
+    width: 100%;
+}
+
+.govuk-header__logotype {
+    padding-right: 10px;
+}
+
 .govuk-header__product-name {
-    padding-left: 10px;
+    font-size: 1.5rem !important;
 }
 
 .govuk-footer__copyright-logo {
@@ -81,9 +103,10 @@ td, th {
 }
 
 .dashboard-container {
+    width: 100%;
     display: grid;
     grid-column-gap: 20px;
-    grid-template-columns: 200px auto;
+    grid-template-columns: 200px calc(100% - 220px);
 }
 
 .dashboard-nav {
@@ -180,10 +203,6 @@ td, th {
 
     .nav-extra {
         border: none !important;
-    }
-
-    .govuk-phase-banner__text {
-        font-size: 0.75rem
     }
 
 }
@@ -346,6 +365,7 @@ a.download-link {
     padding: 15px 0px;
     display: flex;
     flex-wrap: wrap;
+    margin: 0px;
 }
 
 .data-filters {
