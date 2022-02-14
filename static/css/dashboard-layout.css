@@ -332,3 +332,37 @@ a.download-link {
     min-height: 2.5em;
     padding: 0 0 0 50px;
 }
+
+/*  ===========================
+    data-card section styling
+    =========================== */
+
+.data-card {
+    background-color: var(--govuk-colour-light-grey);
+    padding: 15px 0px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.data-filters {
+    margin-top: 5px;
+}
+
+.data-display {
+    border-left: 2px solid var(--govuk-border-colour);
+}
+
+@media screen and (max-width:640px) {
+    .data-display {
+        border-left: none;
+    }
+
+    .data-filters {
+        border-bottom: 2px solid var(--govuk-border-colour);
+    }
+}
+
+.data-card.govuk-grid-column-full,
+.data-card .govuk-grid-column-full {
+    padding: 0px 15px;
+}
