@@ -162,6 +162,15 @@
   border-left: 2px solid var(--govuk-border-colour);
 }
 
+@media screen and (max-width:640px) {
+  .data-display {
+    border-left: none;
+  }
+  .data-filters {
+    border-bottom: 2px solid var(--govuk-border-colour);
+  }
+}
+
 .data-card.govuk-grid-column-full,
 .data-card .govuk-grid-column-full {
   padding: 0px 15px;
