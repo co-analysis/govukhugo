@@ -146,12 +146,14 @@ td, th {
     .sidebar-nav li a {
         text-decoration: underline;
         font-weight: normal;
+        font-size: 0.875rem !important;
         color: var(--govuk-text-colour) !important;
     }
 
     li.nav-section.nav-active-section {
         display: inline;
-        padding: 0;
+        padding: 0px !important;
+        border: none;
     }
 
     li.nav-active-section.nav-current {
@@ -216,10 +218,11 @@ td, th {
 
 .nav-section,
 .nav-item {
-    line-height: 1rem;
+    line-height: 1.2rem;
     padding-right: 5px;
     padding-top: 5px;
     padding-bottom: 5px;
+    margin-bottom: 0px !important;
 }
 
 .nav-section {
@@ -229,7 +232,6 @@ td, th {
 
 .nav-section:first-of-type {
     margin-top: 0px;
-    padding-left: 15px;
 }
 
 .nav-active-section.nav-current {
@@ -239,7 +241,8 @@ td, th {
 }
 
 .nav-active-section {
-    padding-left: 10px;
+    border-left: 5px solid var(--govuk-colour-mid-grey);
+    padding-left: 10px !important;
 }
 
 .nav-section:hover {
@@ -268,6 +271,12 @@ td, th {
 }
 
 .nav-item {
+    border-left: 2px solid var(--govuk-colour-mid-grey);
+    padding-left: 13px;
+}
+
+.nav-item.nav-about {
+    border-left: unset;
     padding-left: 15px;
 }
 
