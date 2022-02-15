@@ -1,0 +1,9 @@
+{{ if eq .Level 1 }}
+<h{{ .Level }} id="{{ .Anchor | safeURL }}" class="govuk-heading-xl">{{ .Text | safeHTML }}</h{{ .Level }}>
+{{ else if eq .Level 2 }}
+<h{{ .Level }} id="{{ .Anchor | safeURL }}" class="govuk-heading-l">{{ .Text | safeHTML }}</h{{ .Level }}>
+{{ else if eq .Level 3 }}
+<h{{ .Level }} id="{{ .Anchor | safeURL }}" class="govuk-heading-m">{{ .Text | safeHTML }}</h{{ .Level }}>
+{{ else }}
+<h{{ .Level }} id="{{ .Anchor | safeURL }}" class="govuk-heading-s">{{ .Text | safeHTML }}</h{{ .Level }}>
+{{ end }}
