@@ -76,6 +76,8 @@
   <link href="{{ "css/rmarkdown.css" | absURL }}" rel="stylesheet" />
   {{ end }}
 
+  {{ with $.Site.Params.Govuk }}
   <meta property="og:image" content="{{ "assets/images/govuk-opengraph-image.png" | absURL }}">
+  {{ end }}
 
 </head>
