@@ -399,3 +399,9 @@ a.download-link {
 .data-card .govuk-grid-column-full {
     padding: 0px 15px;
 }
+
+#scroll-back {
+    display: none;
+    bottom: 25px;
+    position: sticky;
+}

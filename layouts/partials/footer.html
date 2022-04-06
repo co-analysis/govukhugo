@@ -211,6 +211,18 @@
 
     {{ end }}
 
+    function scrollTop() {
+        if (window.innerWidth <= 768) {
+            document.getElementById("scroll-back").style.display = "none";
+        } else if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            document.getElementById("scroll-back").style.display = "block";
+        } else {
+            document.getElementById("scroll-back").style.display = "none";
+        };
+    }
+
+    window.onscroll = function() { scrollTop() };
+
 </script>
 
 <!-- GOV.UK scripting -->
