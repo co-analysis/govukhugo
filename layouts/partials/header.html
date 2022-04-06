@@ -37,10 +37,15 @@
                 {{ end }}
 
             </a>
+            <button class="mobile-nav-button govuk-button" id="mobile-nav-control">Menu ▼</button>
         </div>
 
     </div>
 </header>
+
+<div class="govuk-width-container">
+    {{ partial "mobile-nav.html" . }}
+</div>
 
 {{ with $.Site.Params.Phase }}
 <div class="govuk-width-container">

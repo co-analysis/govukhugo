@@ -223,6 +223,18 @@
 
     window.onscroll = function() { scrollTop() };
 
+    function mobileNav() {
+        var navState = document.getElementById("mobile-nav").style.display
+        if (navState == '' || navState == "none") {
+            document.getElementById("mobile-nav").style.display = "block";
+        } else {
+            document.getElementById("mobile-nav").style.display = "none";
+        }
+        console.log(navState)
+    }
+
+    document.getElementById("mobile-nav-control").onclick = function() { mobileNav() };
+
 </script>
 
 <!-- GOV.UK scripting -->

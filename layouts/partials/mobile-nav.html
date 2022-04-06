@@ -1,0 +1,70 @@
+<!-- sidebar start -->
+<nav class="mobile-nav" id="mobile-nav">
+
+        {{ $currentPage := . }}
+        {{ $active := "" }}
+
+        {{ $site_sections := where .Site.Pages "Kind" "section" }}
+
+        <ul class="govuk-list">
+
+                {{ range sort $site_sections ".Params.Weight" }}
+
+                {{ $currentSection := . }}
+
+                {{ if eq $currentPage . }}
+                <li class="nav-section nav-active-section nav-current"><a class="govuk-!-font-size-16" href="{{ .RelPermalink }}">{{ .Title }}</a>
+                </li>
+                {{ else }}
+
+                {{ if eq $currentSection.Section $currentPage.Section }}
+                <li class="nav-section nav-active-section"><a class="govuk-!-font-size-16" href="{{ .RelPermalink }}">{{ .Title }}</a>
+                </li>
+                {{ else }}
+                <li class="nav-section"><a class="govuk-!-font-size-16" href="{{ .RelPermalink }}">{{ .Title }}</a>
+                </li>
+                {{ end }}
+                {{ end }}
+
+                {{range .Pages.GroupBy "Weight" }}
+                {{range .Pages.ByTitle }}
+
+                {{ if eq $currentSection.Section $currentPage.Section }}
+
+                {{ if eq $currentPage . }}
+                <li class="nav-item nav-active-item"><a
+                                class="govuk-!-font-size-14 govuk-link govuk-link--no-visited-state "
+                                href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+                {{ else }}
+                <li class="nav-item"><a class="govuk-!-font-size-14 govuk-link govuk-link--no-visited-state"
+                                href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+                {{ end }}
+
+                {{ end }}
+
+                {{ end }}
+                {{ end }}
+
+                {{ end }}
+
+        </ul>
+
+        {{ with .Site.GetPage "/about" }}
+
+        <ul class="govuk-list nav-extra">
+
+                {{ if eq $currentPage . }}
+                <li class="nav-item nav-active-item nav-about"><a
+                                class="govuk-!-font-size-14 govuk-link govuk-link--no-visited-state"
+                                href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+                {{ else }}
+                <li class="nav-item nav-about"><a class="govuk-!-font-size-14 govuk-link govuk-link--no-visited-state"
+                                href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+                {{ end }}
+
+                </a>
+
+        </ul>
+        {{ end }}
+
+</nav>

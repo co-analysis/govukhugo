@@ -139,7 +139,7 @@ td, th {
         margin: 0;
     }
 
-    li.nav-section {
+    .sidebar-nav li.nav-section {
         display: none;
     }
 
@@ -150,25 +150,25 @@ td, th {
         color: var(--govuk-text-colour) !important;
     }
 
-    li.nav-section.nav-active-section {
+    .sidebar-nav li.nav-section.nav-active-section {
         display: inline;
         padding: 0px !important;
         border: none;
     }
 
-    li.nav-active-section.nav-current {
+    .sidebar-nav li.nav-active-section.nav-current {
         display: none;
     }
 
-    li.nav-section.nav-active-section:hover {
+    .sidebar-nav li.nav-section.nav-active-section:hover {
         border: none;
     }
 
-    li.nav-item {
+    .sidebar-nav li.nav-item {
         display: none;
     }
 
-    li.nav-item.nav-active-item {
+    .sidebar-nav li.nav-item.nav-active-item {
         display: inline;
         border: none;
         background-color: unset;
@@ -176,7 +176,7 @@ td, th {
         padding: 0px;
     }
 
-    li.nav-item.nav-active-item::before {
+    .sidebar-nav li.nav-item.nav-active-item::before {
         content: "";
         display: inline-block;
         top: 0;
@@ -194,19 +194,43 @@ td, th {
         border-color: #505a5f;
     }
 
-    li.nav-item.nav-active-item:hover {
+    .sidebar-nav li.nav-item.nav-active-item:hover {
         border: none !important;
         background-color: unset;
     }
 
-    li.nav-about {
+    .sidebar-nav li.nav-about {
         display: none !important;
     }
 
-    .nav-extra {
+    .sidebar-nav .nav-extra {
         border: none !important;
     }
 
+    .mobile-nav-button {
+        display: inline-block !important;
+    }
+
+}
+
+.mobile-nav-button {
+    display: none;
+}
+
+.mobile-nav, #mobile-nav {
+    display: none;
+}
+
+.mobile-nav li {
+    width: 100%;
+}
+
+.mobile-nav-button {
+    background-color: var(--govuk-colour-black) !important;
+    border: 2px solid var(--govuk-colour-white) !important;
+    margin: 10px;
+    margin-left: auto;
+    width: fit-content;
 }
 
 .sidebar-nav {
