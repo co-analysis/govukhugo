@@ -1,0 +1,23 @@
+{{ $tabTitle := .Scratch.Get "tabTitle" }}
+{{ $tabRef := .Scratch.Get "tabRef" }}
+{{ $setLength := len $tabTitle }}
+
+<div class="govuk-tabs" data-module="govuk-tabs">
+  <h2 class="govuk-tabs__title">
+    Contents
+  </h2>
+  <ul class="govuk-tabs__list">
+    {{ range $index, $num := (seq $setLength) }}
+      {{ if eq . 1 }}
+      <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+        <a class="govuk-tabs__tab" href="#{{ index $tabRef $index }}">{{index $tabTitle $index}}</a>
+      </li>
+      {{ else }}
+      <li class="govuk-tabs__list-item">
+        <a class="govuk-tabs__tab" href="#{{ index $tabRef $index }}">{{index $tabTitle $index}}</a>
+      </li>
+      {{ end }}
+    {{ end }}
+  </ul>
+  {{ .Inner }}
+</div>
