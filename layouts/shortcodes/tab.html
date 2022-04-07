@@ -1,10 +1,12 @@
 {{ $tabTitle := .Get "title" }}
+{{ $tabRef := "" }}
 
-{{ with .Get "ref" }}
-{{ $tabRef := replaceRE "\\s" "-" . | lower }}
+{{ if isset .Params "ref" }}
+{{ $tabRef = replaceRE "\\s" "-" (.Get "ref") | lower }}
 {{ else }}
-{{ $tabRef := replaceRE "\\s" "-" $tabTitle | lower }}
+{{ $tabRef = replaceRE "\\s" "-" $tabTitle | lower }}
 {{ end }}
+
 
 {{ .Parent.Scratch.Add "tabTitle" (slice $tabTitle) }}
 {{ .Parent.Scratch.Add "tabRef" (slice $tabRef) }}
