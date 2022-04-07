@@ -2,9 +2,21 @@
 {{ $tabRef := replaceRE "\\s" "-" $tabTitle | lower }}
 {{ .Parent.Scratch.Add "tabTitle" (slice $tabTitle) }}
 {{ .Parent.Scratch.Add "tabRef" (slice $tabRef) }}
+{{ $heading := .Get "heading" }}
 
 <div class="govuk-tabs__panel {{ if ne .Ordinal 0 }}govuk-tabs__panel--hidden{{ end }}" id="{{ $tabRef }}">
+  {{ if eq $heading "xl" }}
+  <h2 class="govuk-heading-xl">{{ $tabTitle }}</h2>
+  {{ if eq $heading "l" }}
   <h2 class="govuk-heading-l">{{ $tabTitle }}</h2>
+  {{ else if eq $heading "m" }}
+  <h2 class="govuk-heading-m">{{ $tabTitle }}</h2>
+  {{ else if eq $heading "s" }}
+  <h2 class="govuk-heading-s">{{ $tabTitle }}</h2>
+  {{ else if eq $heading "hide" }}
+  {{ else }}
+  <h2 class="govuk-heading-l">{{ $tabTitle }}</h2>
+  {{ end }}
   <div class="govuk-body">
   {{ $.Inner | markdownify }}
   </div>
