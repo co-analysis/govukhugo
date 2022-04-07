@@ -3,7 +3,7 @@
 {{ with .Get "ref" }}
 {{ $tabRef := replaceRE "\\s" "-" . | lower }}
 {{ else }}
-{{ $tabRef := replaceRE "\\s" "-" . | lower }}
+{{ $tabRef := replaceRE "\\s" "-" $tabTitle | lower }}
 {{ end }}
 
 {{ .Parent.Scratch.Add "tabTitle" (slice $tabTitle) }}
