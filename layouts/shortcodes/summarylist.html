@@ -1,0 +1,9 @@
+{{ if eq (.Get 0) "noborder"  }}
+<dl class="govuk-summary-list govuk-summary-list--no-border">
+  {{ .Inner }}
+</dl>
+{{ else }}
+<dl class="govuk-summary-list">
+  {{ .Inner }}
+</dl>
+{{ end }}

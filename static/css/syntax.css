@@ -12,6 +12,7 @@
 /* In-line code blocks */
 p code,
 li code,
+dd code,
 td.govuk-table__cell code {
     font-family: FiraCode, monospace !important;
     font-size: 1rem;
