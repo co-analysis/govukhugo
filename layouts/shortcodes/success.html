@@ -1,43 +1,21 @@
-<div class="govuk-notification-banner govuk-notification-banner--success" role="alert"
+{{ with .Get "role" }}
+<div class="govuk-notification-banner govuk-notification-banner--success" role="{{ . }}"
   aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
-  {{ if .IsNamedParams }}
-  <div class="govuk-notification-banner__header">
-    <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
-      {{ .Get "title" }}
-    </h2>
-  </div>
-  <div class="govuk-notification-banner__content">
-    <h3 class="govuk-notification-banner__heading">
-      {{ .Get "message" }}
-    </h3>
-    <div class="govuk-body">{{ .Inner }}</div>
-  </div>
   {{ else }}
-    {{ if len .Params | eq 1 }}
-    <div class="govuk-notification-banner__header">
-      <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
-        {{ .Get 0 }}
-      </h2>
-    </div>
-    <div class="govuk-notification-banner__content">
-      <h3 class="govuk-notification-banner__heading">
-        {{ .Inner }}
-      </h3>
-    </div>
-    {{ else }}
-    <div class="govuk-notification-banner__header">
-      <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
-        {{ .Get 0 }}
-      </h2>
-    </div>
-    <div class="govuk-notification-banner__content">
-      <h3 class="govuk-notification-banner__heading">
-        {{ .Get 1 }}
-      </h3>
-      <div class="govuk-body">
-        {{ .Inner }}
-      </div>
-    </div>
+  <div class="govuk-notification-banner govuk-notification-banner--success" role="alert"
+    aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
     {{ end }}
-  {{ end }}
-</div>
+    <div class="govuk-notification-banner__header">
+      <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+        {{ .Get "title" }}
+      </h2>
+    </div>
+    <div class="govuk-notification-banner__content">
+      <h3 class="govuk-notification-banner__heading">
+        {{ .Get "message" | markdownify }}
+      </h3>
+      {{ with .Inner }}
+      <div class="govuk-body">{{ . | markdownify }}</div>
+      {{ end }}
+    </div>
+  </div>

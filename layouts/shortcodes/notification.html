@@ -1,13 +1,15 @@
-<div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title"
-  data-module="govuk-notification-banner">
+<div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
   <div class="govuk-notification-banner__header">
     <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
-      {{ .Get 0 }}
+      {{ .Get "title" }}
     </h2>
   </div>
   <div class="govuk-notification-banner__content">
-    <div class="govuk-notification-banner__heading">
-      {{ .Inner }}
-    </div>
+    <h3 class="govuk-notification-banner__heading">
+      {{ .Get "message" | markdownify }}
+    </h3>
+    {{ with .Inner }}
+    <div class="govuk-body">{{ . | markdownify }}</div>
+    {{ end }}
   </div>
 </div>
