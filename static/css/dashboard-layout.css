@@ -430,3 +430,30 @@ a.download-link {
     bottom: 25px;
     position: sticky;
 }
+
+
+.data-card .govuk-tabs__list,
+.data-card .govuk-tabs__list-item,
+.data-card .govuk-tabs__panel {
+    border: unset;
+}
+
+.data-card .govuk-tabs__panel {
+    padding-top: 0px;
+}
+
+.data-card .govuk-tabs__list-item--selected {
+    background-color: unset;
+}
+
+.data-card .govuk-tabs__tab {
+    color: var(--govuk-link-colour) !important;
+    text-decoration: none !important;
+}
+
+@media screen and (min-width:641px) {
+    .data-card .govuk-tabs__list-item--selected .govuk-tabs__tab {
+        font-weight: 700;
+        border-bottom: 4px solid var(--govuk-link-colour);
+    }
+}
