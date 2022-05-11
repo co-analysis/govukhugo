@@ -1,6 +1,8 @@
-# govuk-hugo
+# govukhugo
 
-`govuk-hugo` is a theme for the Hugo static site builder that is based on the [GOV.UK Design System](https://design-system.service.gov.uk/).
+**BREAKING CHANGE**: The repository is now named **govukhugo** (formerly govuk-hugo).
+
+`govukhugo` is a theme for the Hugo static site builder that is based on the [GOV.UK Design System](https://design-system.service.gov.uk/).
 
 [Hugo](https://gohugo.io/) is a lightweight static site builder.
 
@@ -8,19 +10,19 @@ This is a work in progress. It has been created to help Cabinet Office Analysts 
 
 ## Features
 
-`govuk-hugo` uses [GOV.UK Frontend v3.10.2](https://github.com/alphagov/govuk-frontend/releases/tag/v3.10.2).
+`govukhugo` uses [GOV.UK Frontend v3.10.2](https://github.com/alphagov/govuk-frontend/releases/tag/v3.10.2).
 
-Hugo uses [Goldmark](https://github.com/yuin/goldmark/) to render markdown to HTML. While boilerplate elements (the header, footer and navbar structure) are natively written to support the Design System, Goldmark does not add the Design System classes to the rendered HTML, the footer content includes JavaScript that applies the Design System CSS to relevant HTML tags. Therefore, `govuk-hugo` is not suitable for environments that do not support JavaScript.
+Hugo uses [Goldmark](https://github.com/yuin/goldmark/) to render markdown to HTML. While boilerplate elements (the header, footer and navbar structure) are natively written to support the Design System, Goldmark does not add the Design System classes to the rendered HTML, the footer content includes JavaScript that applies the Design System CSS to relevant HTML tags. Therefore, `govukhugo` is not suitable for environments that do not support JavaScript.
 
-`govuk-hugo` does not use SASS for CSS processing, therefore the `dashboard-layout.css` provides the GOV.UK colour palettes as `:root` variables.
+`govukhugo` does not use SASS for CSS processing, therefore the `dashboard-layout.css` provides the GOV.UK colour palettes as `:root` variables.
 
-`govuk-hugo` is designed for dashboards, and uses a wider maximum page width than standard GOV.UK pages. Text elements are however limited to a max-width to improve readability: `<p>` and `<pre>` elements are limited to 810px; `<li>` elements are limited to 700px). Other elements (e.g. tables, images, interactives).
+`govukhugo` is designed for dashboards, and uses a wider maximum page width than standard GOV.UK pages. Text elements are however limited to a max-width to improve readability: `<p>` and `<pre>` elements are limited to 810px; `<li>` elements are limited to 700px). Other elements (e.g. tables, images, interactives).
 
-`govuk-hugo` supports code blocks, and provides syntax highlighting with [Highlight.js](https://highlightjs.org/).
+`govukhugo` supports code blocks, and provides syntax highlighting with [Highlight.js](https://highlightjs.org/).
 
 ### Menu
 
-`govuk-hugo` uses a sidebar menu, this relies on your content being organised within sections underneath the `content` folder. Your homepage will not show in the menu. If an `about.md` file is included in the `content` folder then this is rendered as an additional link at the bottom of the menu, any other files in the content directory but not within a sub-folder are not rendered.
+`govukhugo` uses a sidebar menu, this relies on your content being organised within sections underneath the `content` folder. Your homepage will not show in the menu. If an `about.md` file is included in the `content` folder then this is rendered as an additional link at the bottom of the menu, any other files in the content directory but not within a sub-folder are not rendered.
 
 ## Installation
 
@@ -30,10 +32,10 @@ To install the theme either:
 
 Download this repo as a zip and extract the files and copy them to the folder `themes/govukhugo` within your Hugo site base folder (note the lack of dash!!).
 
-Or, add `govuk-hugo` as a submodule to your Hugo site's repository
+Or, add `govukhugo` as a submodule to your Hugo site's repository
 
 ```
-$ git submodule add https://github.com/co-analysis/govuk-hugo.git themes/govukhugo
+$ git submodule add https://github.com/co-analysis/govukhugo.git themes/govukhugo
 ```
 
 ## Configuration
