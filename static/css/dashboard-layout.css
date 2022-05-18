@@ -457,3 +457,22 @@ a.download-link {
         border-bottom: 4px solid var(--govuk-link-colour);
     }
 }
+
+div.footnotes {
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid var(--govuk-border-colour);
+}
+
+div.footnotes::before {
+    content: "Endnotes:";
+    font-weight: 700;
+}
+
+div.footnotes hr {
+    margin: 0px;
+}
+
+div.footnotes ol {
+    margin-top: 20px;
+}
