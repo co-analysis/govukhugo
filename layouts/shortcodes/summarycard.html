@@ -2,8 +2,9 @@
     <div class="summary-body">
         <div class="govuk-heading-s govuk-!-margin-bottom-0">{{ .Get "title" }}</div>
         <div class="summary-info">
-            <span class="govuk-!-font-size-48 govuk-!-font-weight-bold">{{ .Get "value" }}</span>
-            {{ with .Get "change" }}<span class="govuk-caption-xl govuk-!-font-size-27">{{ . }}</span>{{ end }}
+            <div class="govuk-!-font-size-48 govuk-!-font-weight-bold">{{ .Get "value" }}</span>
+            {{ with .Get "change" }}
+            <div class="govuk-caption-xl govuk-!-font-size-27">{{ . }}</span>{{ end }}
         </div>
     </div>
     {{ with .Get "source"}}

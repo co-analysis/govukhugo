@@ -526,8 +526,8 @@ div.footnotes ol {
     justify-content: space-evenly;
 }
 
-.summary-info span {
-    align-self: center;
+.summary-info div {
+    align-self: baseline;
 }
 
 .summary-source {
