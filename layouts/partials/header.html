@@ -47,6 +47,16 @@
     {{ partial "mobile-nav.html" . }}
 </div>
 
+{{ with $.Site.Params.Banner }}
+<div class="govuk-width-container">
+    <div class="govuk-phase-banner banner-message">
+        <p class="govuk-phase-banner__content">
+            <a class="govuk-link govuk-link--inverse" href="{{ .URL }}">{{ .message }}</a>
+        </p>
+    </div>
+</div>
+{{ end }}
+
 {{ with $.Site.Params.Phase }}
 <div class="govuk-width-container">
     <div class="govuk-phase-banner">
