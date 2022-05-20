@@ -49,22 +49,18 @@
 
         </ul>
 
-        {{ with .Site.GetPage "/about" }}
+        {{ with .Site.Menus.secondary }}
 
         <ul class="govuk-list nav-extra">
 
-                {{ if eq $currentPage . }}
-                <li class="nav-item nav-active-item nav-about"><a
+        {{ range . }}
+                <li class="nav-item {{ if $currentPage.IsMenuCurrent "secondary" . }}nav-active-item{{ end }} nav-about"><a
                                 class="govuk-!-font-size-14 govuk-link govuk-link--no-visited-state"
-                                href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-                {{ else }}
-                <li class="nav-item nav-about"><a class="govuk-!-font-size-14 govuk-link govuk-link--no-visited-state"
-                                href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-                {{ end }}
-
-                </a>
+                                href="{{ .URL }}">{{ .Name }}</a></li>
+        {{ end }}
 
         </ul>
+
         {{ end }}
 
 </nav>
