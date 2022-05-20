@@ -311,6 +311,11 @@ td, th {
     padding-left: 10px;
 }
 
+.nav-active-item.nav-about {
+    border-left: 5px solid var(--govuk-link-colour);
+    padding-left: 10px;
+}
+
 .nav-item:hover {
     border-left: 5px solid var(--govuk-colour-light-blue);
     padding-left: 10px;
@@ -475,4 +480,70 @@ div.footnotes hr {
 
 div.footnotes ol {
     margin-top: 20px;
+}
+
+.banner-message {
+    background-color: var(--govuk-brand-colour);
+    border-top: 1px solid var(--govuk-colour-white);
+    border-bottom: 5px solid var(--govuk-brand-colour);
+    padding-left: 10px;
+    padding-top: 5px;
+}
+
+.summary-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: stretch;
+}
+
+.summary-card {
+    padding: 15px;
+    border: 5px solid var(--govuk-colour-white);
+    display: block;
+}
+
+.summary-body {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    min-height: 125px;
+}
+
+.summary-card-blue {
+    background-color: var(--govuk-brand-colour);
+    color: var(--govuk-colour-white) !important;
+}
+
+.summary-card-blue div, .summary-card-blue div span {
+    color: var(--govuk-colour-white) !important;
+}
+
+.summary-info {
+    margin: 10px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.summary-info span {
+    align-self: center;
+}
+
+.summary-source {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid var(--govuk-border-colour);
+}
+
+.summary-source a {
+    text-decoration: none;
+    font-weight: 700;
+    color: var(--govuk-link-colour);
+}
+
+.summary-source a:visited {
+    text-decoration: none;
+    font-weight: 700;
+    color: var(--govuk-link-colour);
 }
