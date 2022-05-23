@@ -46,14 +46,14 @@
     max-width: 1440px;
 }
 
-@media screen and (max-width:768px) {    
+@media screen and (max-width: 900px) {    
     .govuk-width-container {
         margin-left: max(30px, calc(15px + env(safe-area-inset-left)));
         margin-right: max(30px, calc(15px + env(safe-area-inset-left)));
     }
 }
 
-@media screen and (max-width:425px) {
+@media screen and (max-width: 425px) {
     .govuk-width-container {
         margin-left: max(15px, calc(15px + env(safe-area-inset-left)));
         margin-right: max(15px, calc(15px + env(safe-area-inset-left)));
@@ -118,7 +118,7 @@ td, th {
     grid-column: 2;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
 
     .govuk-main-wrapper {
         padding-top: 20px;
@@ -484,10 +484,20 @@ div.footnotes ol {
 
 .banner-message {
     background-color: var(--govuk-brand-colour);
-    border-top: 1px solid var(--govuk-colour-white);
     border-bottom: 5px solid var(--govuk-brand-colour);
     padding-left: 10px;
     padding-top: 5px;
+}
+
+.banner-message strong.govuk-tag {
+    background-color: var(--govuk-colour-white);
+    color: var(--govuk-brand-colour);
+    margin-right: 5px;
+}
+
+.banner-message .govuk-phase-banner__content {
+    color: var(--govuk-colour-white);
+    font-weight: 700;
 }
 
 .summary-row {
@@ -499,7 +509,7 @@ div.footnotes ol {
 .summary-card {
     padding: 15px;
     border: 5px solid var(--govuk-colour-white);
-    display: block;
+    align-content: space-between;
 }
 
 .summary-body {
@@ -523,6 +533,7 @@ div.footnotes ol {
     margin: 10px 0px;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-evenly;
 }
 
