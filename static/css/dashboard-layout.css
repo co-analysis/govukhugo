@@ -409,16 +409,10 @@ a.download-link {
 
 .data-filters {
     margin-top: 5px;
-}
-
-.data-display {
-    border-left: 2px solid var(--govuk-border-colour);
+    border-right: 2px solid var(--govuk-border-colour);
 }
 
 @media screen and (max-width:640px) {
-    .data-display {
-        border-left: none;
-    }
 
     .data-filters {
         border-bottom: 2px solid var(--govuk-border-colour);
@@ -436,6 +430,13 @@ a.download-link {
     position: sticky;
 }
 
+.data-card .govuk-tabs {
+    margin: 0px;
+}
+
+.data-card .govuk-tabs {
+    margin: 0px;
+}
 
 .data-card .govuk-tabs__list,
 .data-card .govuk-tabs__list-item,
@@ -444,11 +445,15 @@ a.download-link {
 }
 
 .data-card .govuk-tabs__panel {
-    padding-top: 0px;
+    padding: 0px 20px;
 }
 
 .data-card .govuk-tabs__list-item--selected {
     background-color: unset;
+}
+
+.data-card .govuk-table {
+    margin-bottom: 0px;
 }
 
 .data-card .govuk-tabs__tab {
