@@ -65,7 +65,7 @@
 }
 
 .dt-buttons button.buttons-copy {
-  background-image: url("../assets/images/content_copy_blue_18dp.svg");
+  background-image: url("../images/content_copy_blue_18dp.svg");
   background-repeat: no-repeat;
   background-size: 20px 20px;
   background-position: 5px 5px;
@@ -74,7 +74,7 @@
 }
 
 .dt-buttons button.buttons-csv {
-  background-image: url("../assets/images/file_download_blue_18dp.svg");
+  background-image: url("../images/file_download_blue_18dp.svg");
   background-repeat: no-repeat;
   background-size: 20px 20px;
   background-position: 5px 5px;
