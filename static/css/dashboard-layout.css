@@ -385,6 +385,10 @@ figure {
     margin: 0px;
 }
 
+figure svg {
+    width: 100%;
+}
+
 a.download-link {
     display: block;
     font-weight: 600;
@@ -405,6 +409,7 @@ a.download-link {
     display: flex;
     flex-wrap: wrap;
     margin: 0px;
+    margin-bottom: 20px;
 }
 
 .data-filters {
