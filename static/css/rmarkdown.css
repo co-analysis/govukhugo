@@ -4,295 +4,320 @@
     dataTables styling
     =========================== */
 
-.dataTable {
-  margin-bottom: 10px !important;
-}
-
-.dataTable tr {
-  background-color: unset !important;
-}
-
-.dataTables_wrapper .dataTables_paginate .ellipsis {
-  padding: 0 0.25em !important;
-  colour: var(--govuk-secondary-text-colour);
-}
-
-.dataTable th, .dataTable td {
-  padding-left: 0px !important;
-  padding-right: 20px !important;
-  padding-top: 10px !important;
-  padding-bottom: 10px !important;
-}
-
-.DataTables_sort_icon {
-  margin: unset !important;
-  position: unset !important;
-  right: unset !important;
-}
-
-.sorting_asc .DataTables_sort_icon::after {
-  content: "▲";
-  font-size: 0.8rem;
-  padding-left: 0.2rem;
-}
-
-.sorting_desc .DataTables_sort_icon::after {
-  content: "▼";
-  font-size: 0.8rem;
-  padding-left: 0.2rem;
-}
-
-.dataTables_filter {
-  margin-bottom: 10px;
-}
-
-.dataTables_filter label {
-  text-align: left !important;
-}
-
-.dataTables_filter input {
-  margin-left: 0px !important;
-  margin-top: 5px !important;
-}
-
-.dt-buttons button {
-  background-color: unset;
-  margin-bottom: 10px !important;
-  border: 0;
-  cursor: pointer;
-  color: var(--govuk-link-colour);
-  font-weight: bold;
-}
-
-.dt-buttons button.buttons-copy {
-  background-image: url("../images/content_copy_blue_18dp.svg");
-  background-repeat: no-repeat;
-  background-size: 20px 20px;
-  background-position: 5px 5px;
-  padding-left: 30px;
-  min-height: 30px;
-}
-
-.dt-buttons button.buttons-csv {
-  background-image: url("../images/file_download_blue_18dp.svg");
-  background-repeat: no-repeat;
-  background-size: 20px 20px;
-  background-position: 5px 5px;
-  padding-left: 30px;
-  min-height: 30px;
-}
-
-.govuk_dt_table {
-  overflow-x: scroll;
-}
-
-.govuk_dt_nav {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.govuk_dt_nav > div {
-  margin-bottom: 10px;
-}
-
-.govuk_dt_nav .dataTables_paginate .ui-button {
-  padding: 5px 0px !important;
-  margin: 0px 2px !important;
-}
-
-.datatables a.ui-button:not(.ui-state-disabled) {
-  color: var(--govuk-link-colour);
-  font-weight: bold;
-}
-
-.govuk_dt_nav .dataTables_paginate .ui-button:first-of-type {
-  margin-left: 0px !important;
-}
-
-.dataTables_info {
-  color: var(--govuk-secondary-text-colour) !important;
-}
-
-.govuk_dt_nav .dt-buttons:only-child {
-  margin-right: 0;
-  margin-left: auto;
-}
-
-.dt-button-info {
-  border: 5px solid var(--govuk-colour-black) !important;
-  background-color: var(--govuk-colour-black) !important;
-  box-shadow: 0px 0px 0px 5px var(--govuk-colour-yellow) !important;
-  border-radius: 0px !important;
-}
-
-.dt-button-info h2 {
-  color: #fff;
-  background-color: unset !important;
-  border: none !important;
-  font-weight: bold !important;
-  font-size: 1rem;
-  text-align: left;
-  padding: 10px 15px !important;
-}
-
-.dt-button-info > div {
-  background-color: #fff !important;
-  text-align: left;
-  padding: 15px !important;
-}
-
-/*  ===========================
-    crosstalk selectize filters
-    =========================== */
-
-.crosstalk-input .control-label {
-  margin-bottom: 5px;
-}
-
-.selectize-input {
-  -webkit-appearance: none;
-  border: 2px solid #0b0c0c;
-  border-radius: 0;
-  /* Safari 10 on iOS adds implicit border rounding. */
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  margin-bottom: 0;
-  /* BUG: Safari 10 on macOS seems to add an implicit margin. */
-  width: 100%;
-  background-color: #fff;
-  padding: 5px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5px;
-  min-height: calc(1.3rem + 25px);
-}
-
-.selectize-input input,
-.selectize-input input:active {
-  border: none;
-  outline: none;
-}
-
-.selectize-input.input-active,
-.selectize-input:hover {
-  outline: 3px solid #fd0;
-  outline-offset: 0;
-  box-shadow: inset 0 0 0 2px;
-}
-
-.selectize-dropdown {
-  box-shadow: rgba(0, 0, 0, 0.256863) 0px 2px 6px;
-  left: 0;
-  position: absolute;
-  top: 100%;
-  z-index: 100;
-}
-
-.selectize-dropdown-content {
-  background-color: #fff;
-  border: 2px solid #0B0C0C;
-  border-top: 0;
-  color: #0B0C0C;
-  margin: 0;
-  max-height: 342px;
-  overflow-x: hidden;
-  padding: 0;
-  width: 100%;
-  width: calc(100% - 4px);
-}
-
-.selectize-dropdown-content .option {
-  border-bottom: solid #b1b4b6;
-  border-width: 1px 0;
-  cursor: pointer;
-  display: block;
-  position: relative;
-}
-
-.selectize-dropdown-content .option.active {
-  background-color: #1d70b8;
-  border-color: #1d70b8;
-  color: white;
-  outline: none;
-}
-
-.selectize-dropdown-content .option >* {
-  pointer-events: none;
-}
-
-.selectize-dropdown-content .option:first-of-type {
-  border-top-width: 0;
-}
-
-.selectize-dropdown-content .option:last-of-type {
-  border-bottom-width: 0;
-}
-
-.selectize-input .item {
-  width: fit-content;
-  background-color: var(--govuk-colour-light-grey);
-  border: 1px solid var(--govuk-border-colour);
-}
-
-.selectize-input .item, .selectize-dropdown-content .option {
-  line-height: 1.25;
-  padding: 5px;
-}
-
-/*  ===========================
-    crosstalk checkbox filters
-    =========================== */
-
-.crosstalk-options-group .checkbox {
-  min-height: 24px;
-  margin-bottom: 15px;
-}
-
-.crosstalk-options-group .checkbox input {
-  cursor: pointer;
-  position: absolute;
-  z-index: 1;
-  top: -2px;
-  left: -10px;
-  width: 24px;
-  height: 24px;
-  margin: 0;
-  opacity: 0
-}
-
-.crosstalk-options-group .checkbox label {
-  padding: 5px 35px;
-}
-
-.crosstalk-options-group .checkbox label input ~ span::before {
-  content: "";
-  box-sizing: border-box;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 24px;
-  height: 24px;
-  border: 2px solid var(--govuk-colour-black);
-  background-color: #fff;
-}
-
-.crosstalk-options-group .checkbox label input:checked ~ span::after {
-  content: "";
-  box-sizing: border-box;
-  position: absolute;
-  top: 6px;
-  left: 6px;
-  width: 12px;
-  height: 6.5px;
-  transform: rotate(-45deg);
-  border-left: 3px solid var(--govuk-colour-black);
-  border-bottom: 3px solid var(--govuk-colour-black);
-}
-
-#clear-filters {
-  color: var(--govuk-link-colour);
-  font-weight: bold;
-  cursor: pointer;
-}
+    .dataTable {
+      margin-bottom: 10px !important;
+    }
+    
+    .dataTable tr {
+      background-color: unset !important;
+    }
+    
+    .dataTables_wrapper .dataTables_paginate .ellipsis {
+      padding: 0 0.25em !important;
+      colour: var(--govuk-secondary-text-colour);
+    }
+    
+    .dataTable th, .dataTable td {
+      padding-left: 0px !important;
+      padding-right: 20px !important;
+      padding-top: 10px !important;
+      padding-bottom: 10px !important;
+    }
+    
+    .DataTables_sort_icon {
+      margin: unset !important;
+      position: unset !important;
+      right: unset !important;
+    }
+    
+    .sorting_asc .DataTables_sort_icon::after {
+      content: "▲";
+      font-size: 0.8rem;
+      padding-left: 0.2rem;
+    }
+    
+    .sorting_desc .DataTables_sort_icon::after {
+      content: "▼";
+      font-size: 0.8rem;
+      padding-left: 0.2rem;
+    }
+    
+    .dataTables_filter {
+      margin-bottom: 10px;
+    }
+    
+    .dataTables_filter label {
+      text-align: left !important;
+    }
+    
+    .dataTables_filter input {
+      margin-left: 0px !important;
+      margin-top: 5px !important;
+    }
+    
+    .dt-buttons button {
+      background-color: unset;
+      margin-bottom: 10px !important;
+      border: 0;
+      cursor: pointer;
+      color: var(--govuk-link-colour);
+      font-weight: bold;
+    }
+    
+    .dt-buttons button.buttons-copy {
+      background-image: url("../images/content_copy_blue_18dp.svg");
+      background-repeat: no-repeat;
+      background-size: 20px 20px;
+      background-position: 5px 5px;
+      padding-left: 30px;
+      min-height: 30px;
+    }
+    
+    .dt-buttons button.buttons-csv {
+      background-image: url("../images/file_download_blue_18dp.svg");
+      background-repeat: no-repeat;
+      background-size: 20px 20px;
+      background-position: 5px 5px;
+      padding-left: 30px;
+      min-height: 30px;
+    }
+    
+    .govuk_dt_table {
+      overflow-x: scroll;
+    }
+    
+    .govuk_dt_nav {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    
+    .govuk_dt_nav > div {
+      margin-bottom: 10px;
+    }
+    
+    .govuk_dt_nav .dataTables_paginate, .govuk_dt_nav .dataTables_info {
+      padding-top: 5px;
+    }
+    
+    .govuk_dt_nav .dataTables_paginate a.ui-button {
+      padding: 5px 2px !important;
+      margin: 0px 2px !important;
+    }
+    
+    .govuk_dt_nav .dataTables_paginate a.ui-button.previous.ui-state-disabled,
+    .govuk_dt_nav .dataTables_paginate a.ui-button.next.ui-state-disabled {
+      display: none;
+    }
+    
+    .govuk_dt_nav .dataTables_paginate a.ui-button.ui-state-disabled {
+      color: var(--govuk-colour-white);
+      background-color: var(--govuk-link-colour);
+      font-weight: bold;
+      padding: 5px !important;
+    }
+    
+    .govuk_dt_nav .dataTables_paginate a.ui-button:not(.ui-state-disabled) {
+      color: var(--govuk-link-colour);
+      font-weight: bold;
+    }
+    
+    .govuk_dt_nav .dataTables_paginate > a.ui-button:first-of-type {
+      margin-left: 0px !important;
+      padding-left: 0px !important;
+    }
+    
+    .dataTables_info {
+      color: var(--govuk-secondary-text-colour) !important;
+    }
+    
+    .govuk_dt_nav .dt-buttons:only-child {
+      margin-right: 0;
+      margin-left: auto;
+    }
+    
+    .dt-button-info {
+      border: 5px solid var(--govuk-colour-black) !important;
+      background-color: var(--govuk-colour-black) !important;
+      box-shadow: 0px 0px 0px 5px var(--govuk-colour-yellow) !important;
+      border-radius: 0px !important;
+    }
+    
+    .dt-button-info h2 {
+      color: #fff;
+      background-color: unset !important;
+      border: none !important;
+      font-weight: bold !important;
+      font-size: 1rem;
+      text-align: left;
+      padding: 10px 15px !important;
+    }
+    
+    .dt-button-info > div {
+      background-color: #fff !important;
+      text-align: left;
+      padding: 15px !important;
+    }
+    
+    .govuk_dt_numeric_cell, .dt-right {
+      text-align: right;
+    }
+    
+    th.govuk_dt_numeric_cell {
+      font-weight: 700;
+    }
+    
+    /*  ===========================
+        crosstalk selectize filters
+        =========================== */
+    
+    .crosstalk-input .control-label {
+      margin-bottom: 5px;
+    }
+    
+    .selectize-input {
+      -webkit-appearance: none;
+      border: 2px solid #0b0c0c;
+      border-radius: 0;
+      /* Safari 10 on iOS adds implicit border rounding. */
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      margin-bottom: 0;
+      /* BUG: Safari 10 on macOS seems to add an implicit margin. */
+      width: 100%;
+      background-color: #fff;
+      padding: 5px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      min-height: calc(1.3rem + 25px);
+    }
+    
+    .selectize-input input,
+    .selectize-input input:active {
+      border: none;
+      outline: none;
+    }
+    
+    .selectize-input.input-active,
+    .selectize-input:hover {
+      outline: 3px solid #fd0;
+      outline-offset: 0;
+      box-shadow: inset 0 0 0 2px;
+    }
+    
+    .selectize-dropdown {
+      box-shadow: rgba(0, 0, 0, 0.256863) 0px 2px 6px;
+      left: 0;
+      position: absolute;
+      top: 100%;
+      z-index: 100;
+    }
+    
+    .selectize-dropdown-content {
+      background-color: #fff;
+      border: 2px solid #0B0C0C;
+      border-top: 0;
+      color: #0B0C0C;
+      margin: 0;
+      max-height: 342px;
+      overflow-x: hidden;
+      padding: 0;
+      width: 100%;
+      width: calc(100% - 4px);
+    }
+    
+    .selectize-dropdown-content .option {
+      border-bottom: solid #b1b4b6;
+      border-width: 1px 0;
+      cursor: pointer;
+      display: block;
+      position: relative;
+    }
+    
+    .selectize-dropdown-content .option.active {
+      background-color: #1d70b8;
+      border-color: #1d70b8;
+      color: white;
+      outline: none;
+    }
+    
+    .selectize-dropdown-content .option >* {
+      pointer-events: none;
+    }
+    
+    .selectize-dropdown-content .option:first-of-type {
+      border-top-width: 0;
+    }
+    
+    .selectize-dropdown-content .option:last-of-type {
+      border-bottom-width: 0;
+    }
+    
+    .selectize-input .item {
+      width: fit-content;
+      background-color: var(--govuk-colour-light-grey);
+      border: 1px solid var(--govuk-border-colour);
+    }
+    
+    .selectize-input .item, .selectize-dropdown-content .option {
+      line-height: 1.25;
+      padding: 5px;
+    }
+    
+    /*  ===========================
+        crosstalk checkbox filters
+        =========================== */
+    
+    .crosstalk-options-group .checkbox {
+      min-height: 24px;
+      margin-bottom: 15px;
+    }
+    
+    .crosstalk-options-group .checkbox input {
+      cursor: pointer;
+      position: absolute;
+      z-index: 1;
+      top: -2px;
+      left: -10px;
+      width: 24px;
+      height: 24px;
+      margin: 0;
+      opacity: 0
+    }
+    
+    .crosstalk-options-group .checkbox label {
+      padding: 5px 35px;
+    }
+    
+    .crosstalk-options-group .checkbox label input ~ span::before {
+      content: "";
+      box-sizing: border-box;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 24px;
+      height: 24px;
+      border: 2px solid var(--govuk-colour-black);
+      background-color: #fff;
+    }
+    
+    .crosstalk-options-group .checkbox label input:checked ~ span::after {
+      content: "";
+      box-sizing: border-box;
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      width: 12px;
+      height: 6.5px;
+      transform: rotate(-45deg);
+      border-left: 3px solid var(--govuk-colour-black);
+      border-bottom: 3px solid var(--govuk-colour-black);
+    }
+    
+    #clear-filters {
+      color: var(--govuk-link-colour);
+      font-weight: bold;
+      cursor: pointer;
+    }
