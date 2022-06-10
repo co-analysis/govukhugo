@@ -393,7 +393,7 @@ figure svg {
 a.download-link {
     display: block;
     font-weight: 600;
-    background-image: url("../assets/images/file_download_black_48dp.svg");
+    background-image: url("../images/file_download_black_48dp.svg");
     background-repeat: no-repeat;
     background-size: 40px 40px;
     min-height: 2.5em;
