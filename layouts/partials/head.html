@@ -40,10 +40,11 @@
   <!-- code syntax highlighting -->
   <link href="{{ "css/syntax.css" | absURL }}" rel="stylesheet">
 
+  <script src="{{ "rmarkdown/jquery-3.6.0/jquery-3.6.0.min.js" | absURL }}"></script>
+  
   {{ with .Params.rmarkdown }}
   <!-- rmarkdown assets -->
   <script src="{{ "rmarkdown/header-attrs-2.11/header-attrs.js" | absURL }}"></script>
-  <script src="{{ "rmarkdown/jquery-3.6.0/jquery-3.6.0.min.js" | absURL }}"></script>
   <!-- <link href="{{ "rmarkdown/selectize-0.12.4/css/selectize.bootstrap3.css" | absURL }}" rel="stylesheet" disabled /> -->
   <script src="{{ "rmarkdown/selectize-0.12.4/js/selectize.min.js" | absURL }}"></script>
   <link href="{{ "rmarkdown/crosstalk-1.2.0/css/crosstalk.min.css" | absURL }}" rel="stylesheet" />
