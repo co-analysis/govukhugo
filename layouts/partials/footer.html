@@ -235,9 +235,11 @@
 
     document.getElementById("mobile-nav-control").onclick = function() { mobileNav() };
 
+    {{ with .Site.Params.rmarkdown }}
     $("a.govuk-tabs__tab").on("click", function() {
         window.dispatchEvent(new Event('resize'))
     })
+    {{ end }}
 
 </script>
 
