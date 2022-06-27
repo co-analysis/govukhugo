@@ -131,6 +131,14 @@
     applyGOVUK("HR", "govuk-section-break--l");
     applyGOVUK("HR", "govuk-section-break");
 
+    /* Endnotes */
+    document.querySelector("div.footnotes ol").classList.add("govuk-body-s")
+
+    var fn_p = document.querySelectorAll("div.footnotes li p")
+    for (var i = 0; i < fn_p.length; i++) {
+        fn_p[i].classList.add("govuk-body-s")
+    }
+
     /* Add spacing to code highlight divs */
     function styleCodeBlocks() {
         var code_elements = document.querySelectorAll("div.highlight")
