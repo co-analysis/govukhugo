@@ -576,3 +576,13 @@ div.footnotes ol {
     font-weight: 700;
     color: var(--govuk-link-colour);
 }
+
+.data-card .govuk-breadcrumbs {
+    margin-top: 0px;
+}
+
+.data-card .govuk-breadcrumbs a.govuk-breadcrumbs__link:link,
+.data-card .govuk-breadcrumbs a.govuk-breadcrumbs__link:visited,
+.data-card .govuk-breadcrumbs a.govuk-breadcrumbs__link:hover {
+    color: var(--govuk-link-colour);
+}
