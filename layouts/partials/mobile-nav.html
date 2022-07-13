@@ -1,22 +1,27 @@
-<!-- sidebar start -->
+<!-- mobile nav start -->
 <nav class="mobile-nav" id="mobile-nav">
 
+        <!-- Set check references -->
         {{ $currentPage := . }}
         {{ $active := "" }}
 
-        {{ $site_sections := where .Site.Pages "Kind" "section" }}
+        <!-- Get site sections -->
+        {{ $site_sections := .Site.Sections }}
 
         <ul class="govuk-list">
 
+                <!-- Loop through section -->
                 {{ range sort $site_sections ".Params.Weight" }}
 
                 {{ $currentSection := . }}
 
+                <!-- Current page is current section page-->
                 {{ if eq $currentPage . }}
                 <li class="nav-section nav-active-section nav-current"><a class="govuk-!-font-size-16" href="{{ .RelPermalink }}">{{ .Title }}</a>
                 </li>
                 {{ else }}
 
+                <!-- Page in current section / not in current section-->
                 {{ if eq $currentSection.Section $currentPage.Section }}
                 <li class="nav-section nav-active-section"><a class="govuk-!-font-size-16" href="{{ .RelPermalink }}">{{ .Title }}</a>
                 </li>
@@ -26,12 +31,19 @@
                 {{ end }}
                 {{ end }}
 
+                <!-- Loop through section pages by weight and then title -->
                 {{range .Pages.GroupBy "Weight" }}
                 {{range .Pages.ByTitle }}
 
+                <!-- Only show page if in current section -->
                 {{ if eq $currentSection.Section $currentPage.Section }}
 
-                {{ if eq $currentPage . }}
+                <!-- highlight if descendent of page or page itself -->
+                {{ if $currentPage.IsDescendant . }}
+                <li class="nav-item nav-active-item"><a
+                                class="govuk-!-font-size-14 govuk-link govuk-link--no-visited-state "
+                                href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+                {{ else if eq $currentPage . }}
                 <li class="nav-item nav-active-item"><a
                                 class="govuk-!-font-size-14 govuk-link govuk-link--no-visited-state "
                                 href="{{ .RelPermalink }}">{{ .Title }}</a></li>
@@ -49,6 +61,7 @@
 
         </ul>
 
+        <!-- Add secdonary menu if exists -->
         {{ with .Site.Menus.secondary }}
 
         <ul class="govuk-list nav-extra">
